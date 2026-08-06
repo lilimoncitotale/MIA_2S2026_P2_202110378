@@ -1,0 +1,8 @@
+frontend/node_modules/
+frontend/dist/
+backend/servidor
+*.o
+*.obj
+*.exe
+*.out
+.DS_Store
