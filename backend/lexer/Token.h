@@ -13,6 +13,7 @@ enum class TokenType {
     RUTA, // /home/usuario/disco1.mia
     LETRA, // K,M,B,P,E,L,BF,FF,WF
     COMILLAS, // "
+    IDENTIFICADOR, // nombre de particion, nombre de usuario, nombre de grupo
     DESCONOCIDO,
     FIN_DE_ARCHIVO
 
