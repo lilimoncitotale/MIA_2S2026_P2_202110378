@@ -1,0 +1,54 @@
+# ============================================
+# SCRIPT DE PRUEBA - MKFILE Y MKDIR
+# ============================================
+
+# 1. Crear disco y partición
+mkdisk -path=/home/usuario/DiscoTest.mia -size=10 -unit=M -fit=FF
+fdisk -path=/home/usuario/DiscoTest.mia -name=Root -size=8 -unit=M -type=P -fit=BF
+
+# 2. Montar y formatear
+mount -path=/home/usuario/DiscoTest.mia -name=Root
+# → ID: 341A (ajustar según carnet)
+mkfs -id=341A -type=full
+
+# 3. Iniciar sesión como root
+login -user=root -pass=123 -id=341A
+
+# 4. Crear carpetas
+mkdir -path=/home -p
+mkdir -path=/home/usuario -p
+mkdir -path=/home/usuario/documentos -p
+mkdir -path=/var -p
+mkdir -path=/var/log -p
+mkdir -path=/tmp -p
+
+# 5. Crear archivos
+mkfile -path=/home/usuario/archivo1.txt -size=50
+mkfile -path=/home/usuario/archivo2.txt -size=100
+mkfile -path=/home/usuario/documentos/informe.txt -size=200
+mkfile -path=/var/log/sistema.log -size=500
+mkfile -path=/tmp/temp.txt -size=30
+
+# 6. Crear archivo con contenido de la PC
+# echo "Este es un archivo de prueba" > /home/usuario/contenido.txt
+mkfile -path=/home/usuario/desde_pc.txt -cont=/home/usuario/contenido.txt
+
+# 7. Crear usuario y grupo
+mkgrp -name=testers
+mkusr -user=tester1 -pass=test123 -grp=testers
+
+# 8. Cerrar sesión
+logout
+
+# 9. Iniciar sesión como tester1
+login -user=tester1 -pass=test123 -id=341A
+
+# 10. Crear archivos como tester1
+mkdir -path=/home/usuario/tester1 -p
+mkfile -path=/home/usuario/tester1/prueba.txt -size=25
+
+# 11. Cerrar sesión
+logout
+
+# ============================================
+echo "✅ Prueba completada!"

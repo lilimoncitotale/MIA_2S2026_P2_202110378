@@ -1,0 +1,3 @@
+/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/extreamfs.dir
+/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/edit_cache.dir
+/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/rebuild_cache.dir

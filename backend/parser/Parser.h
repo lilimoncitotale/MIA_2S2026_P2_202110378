@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 #include "../lexer/Token.h"
 
 
@@ -38,6 +39,8 @@ struct ParametrosComando{
     bool cont_presente;
     bool r_flag_presente;
     bool type_format_presente;
+    std::map<int, std::string> files;  // file1 → ruta, file2 → ruta
+    bool files_presente ;
 
     //constructor
     ParametrosComando();
@@ -60,10 +63,19 @@ private:
     bool analizarRMDISK();
     bool analizarFDISK();
     bool analizarMOUNT();
+    bool analizarMOUNTED();
     bool analizarMKFS();
     bool analizarMKUSR();
     bool analizarRMUSR();
     bool analizarMKFILE();
+    bool analizarMKGRP();
+    bool analizarRMGRP();
+    bool analizarCHGRP();
+    bool analizarMKDIR();
+    bool analizarLOGIN();
+    bool analizarREP(); 
+    bool analizarLOGOUT();
+    bool analizarCAT();
 
     //metodos auxiliares
     bool esperarToken(TokenType tipo, const std::string& mensaje_error);

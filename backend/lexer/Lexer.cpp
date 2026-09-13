@@ -116,7 +116,7 @@ void Lexer::agregarError(const std::string& mensaje) {
 bool Lexer::esComando(const std::string& palabra) {
     std::vector<std::string> comandos = {
         "MKDISK", "RMDISK", "FDISK", "MOUNT", 
-        "MKFS", "MKUSR", "RMUSR", "MKFILE"
+        "MKFS", "MOUNTED", "LOGIN", "LOGOUT", "MKGRP", "RMGRP", "MKUSR", "RMUSR", "CHGRP", "MKDIR", "MKFILE", "REP", "CAT"
     };
 
     for (const auto& cmd : comandos) {
@@ -130,13 +130,24 @@ bool Lexer::esComando(const std::string& palabra) {
 bool Lexer::esParametroValido(const std::string& parametro) {
     std::vector<std::string> parametrosValidos = {
         "-size", "-unit", "-fit", "-path", "-type", "-name",
-        "-user", "-pass", "-grp", "-r", "-cont", "-id"
+        "-user", "-pass", "-grp", "-r", "-p", "-cont", "-id", "-path_file_ls"
     };
 
     for (const auto& p : parametrosValidos) {
         if (parametro == p) {
             return true;
         }
+    }
+
+       // ✅ Parámetros dinámicos: -fileN (file1, file2, ...)
+    if (parametro.find("-file") == 0 && parametro.length() > 5) {
+        std::string numStr = parametro.substr(5);
+        // Verificar que el resto sean dígitos
+        bool esNumero = !numStr.empty();
+        for (char c : numStr) {
+            if (!isdigit(c)) { esNumero = false; break; }
+        }
+        if (esNumero) return true;
     }
     return false;
 }

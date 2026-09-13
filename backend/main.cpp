@@ -64,6 +64,10 @@ std::string extraerComandoDelJSON(const std::string& body) {
 }
 
 int main() {
+    // Inicializar el MountedManager con los últimos 2 dígitos del carnet
+    // TODO: Cambiar "34" por los últimos 2 dígitos de tu carnet
+    // g_mountedManager = MountedManager("34");
+    
     Server svr;
 
     // Middleware para CORS (maneja OPTIONS)
@@ -128,16 +132,35 @@ int main() {
             resultado = ejecutarFDISK(params);
         } else if (comando == "MOUNT") {
             resultado = ejecutarMOUNT(params);
+        } else if (comando == "MOUNTED") {
+            resultado = ejecutarMOUNTED(params);
         } else if (comando == "MKFS") {
             resultado = ejecutarMKFS(params);
+        } else if (comando == "LOGIN") {
+            resultado = ejecutarLOGIN(params);
+        } else if (comando == "LOGOUT") {
+            resultado = ejecutarLOGOUT(params);
         } else if (comando == "MKUSR") {
             resultado = ejecutarMKUSR(params);
+        } else if (comando == "MKGRP") {
+            resultado = ejecutarMKGRP(params);
+        } else if (comando == "RMGRP") {
+            resultado = ejecutarRMGRP(params);
+        } else if (comando == "CHGRP") {
+            resultado = ejecutarCHGRP(params);
+        } else if (comando == "MKDIR") {
+            resultado = ejecutarMKDIR(params);
         } else if (comando == "RMUSR") {
             resultado = ejecutarRMUSR(params);
         } else if (comando == "MKFILE") {
             resultado = ejecutarMKFILE(params);
-        } else {
-            resultado = "Comando no implementado: " + comando;
+        } else if (comando == "REP") {
+            resultado = ejecutarREP(params);
+        }else if (comando == "CAT") {
+            resultado = ejecutarCAT(params);
+        }
+        else {
+            resultado = "❌ Comando no reconocido: " + comando;
         }
         
         // 5. Devolver respuesta
@@ -173,7 +196,6 @@ int main() {
             }
         }
 
-        
         // Usar nlohmann/json para construir la respuesta (más seguro)
         json respuesta;
         respuesta["tokens"] = json::array();
