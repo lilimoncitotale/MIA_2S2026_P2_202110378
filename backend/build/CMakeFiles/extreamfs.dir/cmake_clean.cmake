@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/extreamfs.dir/sistema/Ejecutores.cpp.o.d"
   "CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.o"
   "CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.o.d"
+  "CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.o"
+  "CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.o.d"
   "CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o"
   "CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o.d"
   "CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o"
@@ -62,8 +64,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o.d"
   "CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o"
   "CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o.d"
-  "CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o"
-  "CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o.d"
   "extreamfs"
   "extreamfs.pdb"
 )

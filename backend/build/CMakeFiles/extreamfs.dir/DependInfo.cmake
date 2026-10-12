@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/parser/Parser.cpp" "CMakeFiles/extreamfs.dir/parser/Parser.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/parser/Parser.cpp.o.d"
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/sistema/Ejecutores.cpp" "CMakeFiles/extreamfs.dir/sistema/Ejecutores.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/sistema/Ejecutores.cpp.o.d"
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/sistema/SistemaArchivos.cpp" "CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.o.d"
+  "/home/lilimon/Documents/Archivos/Proyecto 1/backend/sistema/api_handler.cpp" "CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.o.d"
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/cat.cpp" "CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o.d"
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/chgrp.cpp" "CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o.d"
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/fdisk.cpp" "CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.o.d"
@@ -39,7 +40,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/disk/session.cpp" "CMakeFiles/extreamfs.dir/src/disk/session.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/src/disk/session.cpp.o.d"
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/ext2/ext2_reader.cpp" "CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o.d"
   "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/ext2/ext2_writer.cpp" "CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o.d"
-  "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/server/api_handler.cpp" "CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o" "gcc" "CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o.d"
   "" "extreamfs" "gcc" "CMakeFiles/extreamfs.dir/link.d"
   )
 

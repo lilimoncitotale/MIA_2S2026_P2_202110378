@@ -22,6 +22,8 @@ events:
     candidate_directories:
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -31,9 +33,13 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/uname"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/uname"
+      - "/home/lilimon/.local/bin/uname"
+      - "/home/lilimon/.cargo/bin/uname"
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
       - "/usr/sbin/uname"
@@ -42,6 +48,9 @@ events:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -51,13 +60,23 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 7.0.0-31-generic - x86_64
+      The system is: Linux - 7.0.0-38-generic - x86_64
   -
     kind: "find-v1"
     backtrace:
@@ -81,6 +100,8 @@ events:
     candidate_directories:
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -90,9 +111,13 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
+      - "/home/lilimon/.local/bin/gmake"
+      - "/home/lilimon/.cargo/bin/gmake"
       - "/usr/local/sbin/gmake"
       - "/usr/local/bin/gmake"
       - "/usr/sbin/gmake"
@@ -101,6 +126,9 @@ events:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -110,6 +138,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -138,6 +176,8 @@ events:
     candidate_directories:
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -147,9 +187,13 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/cc"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/cc"
+      - "/home/lilimon/.local/bin/cc"
+      - "/home/lilimon/.cargo/bin/cc"
       - "/usr/local/sbin/cc"
       - "/usr/local/bin/cc"
       - "/usr/sbin/cc"
@@ -158,6 +202,9 @@ events:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -167,6 +214,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -196,6 +253,9 @@ events:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -205,6 +265,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -250,6 +320,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -258,11 +330,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -272,6 +349,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -295,6 +382,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -303,11 +392,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -317,6 +411,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -340,6 +444,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -348,11 +454,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -362,6 +473,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -385,6 +506,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -393,11 +516,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -407,6 +535,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -430,6 +568,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -438,11 +578,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -452,6 +597,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -475,6 +630,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -483,11 +640,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -497,6 +659,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -520,6 +692,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -528,11 +702,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -542,6 +721,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -565,6 +754,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -573,11 +764,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -587,6 +783,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -610,6 +816,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -618,10 +826,14 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/usr/bin/dlltool"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
+      - "/home/lilimon/.local/bin/dlltool"
+      - "/home/lilimon/.cargo/bin/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
       - "/usr/sbin/dlltool"
@@ -630,11 +842,16 @@ events:
       - "/usr/games/dlltool"
       - "/usr/local/games/dlltool"
       - "/snap/bin/dlltool"
+      - "/usr/local/go/bin/dlltool"
+      - "/home/lilimon/go/bin/dlltool"
     found: false
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -644,6 +861,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -667,6 +894,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -675,11 +904,16 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -689,6 +923,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -712,6 +956,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -720,10 +966,14 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/usr/bin/tapi"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
+      - "/home/lilimon/.local/bin/tapi"
+      - "/home/lilimon/.cargo/bin/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
       - "/usr/sbin/tapi"
@@ -732,11 +982,16 @@ events:
       - "/usr/games/tapi"
       - "/usr/local/games/tapi"
       - "/snap/bin/tapi"
+      - "/usr/local/go/bin/tapi"
+      - "/home/lilimon/go/bin/tapi"
     found: false
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -746,6 +1001,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -772,6 +1037,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -780,10 +1047,14 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/usr/bin/gcc-ar-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
+      - "/home/lilimon/.local/bin/gcc-ar-15.2"
+      - "/home/lilimon/.cargo/bin/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
       - "/usr/sbin/gcc-ar-15.2"
@@ -792,11 +1063,16 @@ events:
       - "/usr/games/gcc-ar-15.2"
       - "/usr/local/games/gcc-ar-15.2"
       - "/snap/bin/gcc-ar-15.2"
+      - "/usr/local/go/bin/gcc-ar-15.2"
+      - "/home/lilimon/go/bin/gcc-ar-15.2"
     found: "/usr/bin/gcc-ar-15"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -806,6 +1082,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -832,6 +1118,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -840,10 +1128,14 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
+      - "/home/lilimon/.local/bin/gcc-ranlib-15.2"
+      - "/home/lilimon/.cargo/bin/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
       - "/usr/sbin/gcc-ranlib-15.2"
@@ -852,11 +1144,16 @@ events:
       - "/usr/games/gcc-ranlib-15.2"
       - "/usr/local/games/gcc-ranlib-15.2"
       - "/snap/bin/gcc-ranlib-15.2"
+      - "/usr/local/go/bin/gcc-ranlib-15.2"
+      - "/home/lilimon/go/bin/gcc-ranlib-15.2"
     found: "/usr/bin/gcc-ranlib-15"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -866,6 +1163,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -901,6 +1208,9 @@ events:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -910,6 +1220,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -939,6 +1259,9 @@ events:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -948,6 +1271,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -996,6 +1329,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -1004,10 +1339,14 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/usr/bin/gcc-ar-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
+      - "/home/lilimon/.local/bin/gcc-ar-15.2"
+      - "/home/lilimon/.cargo/bin/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
       - "/usr/sbin/gcc-ar-15.2"
@@ -1016,11 +1355,16 @@ events:
       - "/usr/games/gcc-ar-15.2"
       - "/usr/local/games/gcc-ar-15.2"
       - "/snap/bin/gcc-ar-15.2"
+      - "/usr/local/go/bin/gcc-ar-15.2"
+      - "/home/lilimon/go/bin/gcc-ar-15.2"
     found: "/usr/bin/gcc-ar-15"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1030,6 +1374,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1056,6 +1410,8 @@ events:
       - "/usr/bin/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/lilimon/.local/bin/"
+      - "/home/lilimon/.cargo/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -1064,10 +1420,14 @@ events:
       - "/usr/games/"
       - "/usr/local/games/"
       - "/snap/bin/"
+      - "/usr/local/go/bin/"
+      - "/home/lilimon/go/bin/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
       - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
+      - "/home/lilimon/.local/bin/gcc-ranlib-15.2"
+      - "/home/lilimon/.cargo/bin/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
       - "/usr/sbin/gcc-ranlib-15.2"
@@ -1076,11 +1436,16 @@ events:
       - "/usr/games/gcc-ranlib-15.2"
       - "/usr/local/games/gcc-ranlib-15.2"
       - "/snap/bin/gcc-ranlib-15.2"
+      - "/usr/local/go/bin/gcc-ranlib-15.2"
+      - "/home/lilimon/go/bin/gcc-ranlib-15.2"
     found: "/usr/bin/gcc-ranlib-15"
     search_context:
       ENV{PATH}:
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/lilimon/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.cargo/bin"
+        - "/home/lilimon/.local/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1090,6 +1455,16 @@ events:
         - "/usr/games"
         - "/usr/local/games"
         - "/snap/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
+        - "/usr/local/go/bin"
+        - "/home/lilimon/go/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/.local/bin"
+        - "/home/lilimon/go/bin"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -1099,8 +1474,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-WRhqTk"
-      binary: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-WRhqTk"
+      source: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-6J1UWN"
+      binary: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-6J1UWN"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1109,13 +1484,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-WRhqTk'
+        Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-6J1UWN'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ec19f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_ec19f.dir/build.make CMakeFiles/cmTC_ec19f.dir/build
-        gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-WRhqTk'
-        Building C object CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f33cb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f33cb.dir/build.make CMakeFiles/cmTC_f33cb.dir/build
+        gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-6J1UWN'
+        Building C object CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -1125,8 +1500,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ec19f.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ec19f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccIMN3V1.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f33cb.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f33cb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccgr2Cuk.s
         GNU C23 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1143,14 +1518,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: edd70396dcc669433a92073f97309866
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ec19f.dir/'
-         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o /tmp/ccIMN3V1.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f33cb.dir/'
+         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o /tmp/ccgr2Cuk.s
         GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_ec19f
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec19f.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_f33cb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f33cb.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper
@@ -1163,14 +1538,14 @@ events:
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ec19f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ec19f.'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBQkwHD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ec19f /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f33cb' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f33cb.'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNwAsmN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f33cb /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         collect2 version 15.2.0
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBQkwHD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ec19f /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNwAsmN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f33cb /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.46
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ec19f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ec19f.'
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o -o cmTC_ec19f
-        gmake[1]: Leaving directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-WRhqTk'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f33cb' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f33cb.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o -o cmTC_f33cb
+        gmake[1]: Leaving directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-6J1UWN'
         
       exitCode: 0
   -
@@ -1205,13 +1580,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-WRhqTk']
+        ignore line: [Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-6J1UWN']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ec19f/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_ec19f.dir/build.make CMakeFiles/cmTC_ec19f.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-WRhqTk']
-        ignore line: [Building C object CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f33cb/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f33cb.dir/build.make CMakeFiles/cmTC_f33cb.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-6J1UWN']
+        ignore line: [Building C object CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1221,8 +1596,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ec19f.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ec19f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccIMN3V1.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f33cb.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f33cb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccgr2Cuk.s]
         ignore line: [GNU C23 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1239,14 +1614,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: edd70396dcc669433a92073f97309866]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ec19f.dir/']
-        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o /tmp/ccIMN3V1.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f33cb.dir/']
+        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o /tmp/ccgr2Cuk.s]
         ignore line: [GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_ec19f]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec19f.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_f33cb]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f33cb.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper]
@@ -1259,13 +1634,13 @@ events:
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ec19f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ec19f.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBQkwHD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ec19f /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f33cb' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f33cb.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNwAsmN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f33cb /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccBQkwHD.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccNwAsmN.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1283,7 +1658,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_ec19f] ==> ignore
+          arg [cmTC_f33cb] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o]
@@ -1298,7 +1673,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -1313,7 +1688,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBQkwHD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ec19f /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ec19f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNwAsmN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f33cb /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f33cb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -1353,8 +1728,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-7lXReC"
-      binary: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-7lXReC"
+      source: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-0XhVnp"
+      binary: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-0XhVnp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1364,13 +1739,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-7lXReC'
+        Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-0XhVnp'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_31df0/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_31df0.dir/build.make CMakeFiles/cmTC_31df0.dir/build
-        gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-7lXReC'
-        Building CXX object CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b21d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1b21d.dir/build.make CMakeFiles/cmTC_1b21d.dir/build
+        gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-0XhVnp'
+        Building CXX object CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -1380,8 +1755,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31df0.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_31df0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccHmIibj.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b21d.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1b21d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/cctA0vaH.s
         GNU C++17 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1402,14 +1777,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: b661a74662ad7cf413c4193391ab5290
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31df0.dir/'
-         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccHmIibj.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b21d.dir/'
+         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o /tmp/cctA0vaH.s
         GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_31df0
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31df0.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_1b21d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b21d.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper
@@ -1422,14 +1797,14 @@ events:
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31df0' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_31df0.'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLNK7Vi.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_31df0 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b21d' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b21d.'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCjLGyk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b21d /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         collect2 version 15.2.0
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLNK7Vi.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_31df0 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCjLGyk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b21d /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.46
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31df0' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_31df0.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_31df0
-        gmake[1]: Leaving directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-7lXReC'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b21d' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b21d.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1b21d
+        gmake[1]: Leaving directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-0XhVnp'
         
       exitCode: 0
   -
@@ -1470,13 +1845,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-7lXReC']
+        ignore line: [Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-0XhVnp']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_31df0/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_31df0.dir/build.make CMakeFiles/cmTC_31df0.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-7lXReC']
-        ignore line: [Building CXX object CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b21d/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_1b21d.dir/build.make CMakeFiles/cmTC_1b21d.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-0XhVnp']
+        ignore line: [Building CXX object CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1486,8 +1861,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31df0.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_31df0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccHmIibj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b21d.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1b21d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/cctA0vaH.s]
         ignore line: [GNU C++17 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1508,14 +1883,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b661a74662ad7cf413c4193391ab5290]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31df0.dir/']
-        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccHmIibj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b21d.dir/']
+        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o /tmp/cctA0vaH.s]
         ignore line: [GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_31df0]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31df0.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_1b21d]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b21d.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper]
@@ -1528,13 +1903,13 @@ events:
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31df0' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_31df0.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLNK7Vi.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_31df0 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b21d' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b21d.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCjLGyk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b21d /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccLNK7Vi.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccCjLGyk.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1552,7 +1927,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_31df0] ==> ignore
+          arg [cmTC_1b21d] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o]
@@ -1567,7 +1942,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1578,7 +1953,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLNK7Vi.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_31df0 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_31df0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCjLGyk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b21d /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1b21d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -1620,8 +1995,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-NWeDNs"
-      binary: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-NWeDNs"
+      source: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-B7KBDp"
+      binary: "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-B7KBDp"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1630,17 +2005,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-NWeDNs'
+        Change Dir: '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-B7KBDp'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_93fc7/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_93fc7.dir/build.make CMakeFiles/cmTC_93fc7.dir/build
-        gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-NWeDNs'
-        Building C object CMakeFiles/cmTC_93fc7.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_93fc7.dir/src.c.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-NWeDNs/src.c"
-        Linking C executable cmTC_93fc7
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93fc7.dir/link.txt --verbose=1
-        /usr/bin/cc CMakeFiles/cmTC_93fc7.dir/src.c.o -o cmTC_93fc7
-        gmake[1]: Leaving directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-NWeDNs'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2e0e9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2e0e9.dir/build.make CMakeFiles/cmTC_2e0e9.dir/build
+        gmake[1]: Entering directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-B7KBDp'
+        Building C object CMakeFiles/cmTC_2e0e9.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2e0e9.dir/src.c.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-B7KBDp/src.c"
+        Linking C executable cmTC_2e0e9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e0e9.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_2e0e9.dir/src.c.o -o cmTC_2e0e9
+        gmake[1]: Leaving directory '/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles/CMakeScratch/TryCompile-B7KBDp'
         
       exitCode: 0
 ...

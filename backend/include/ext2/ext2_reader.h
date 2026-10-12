@@ -18,7 +18,7 @@ class Ext2Reader{
         bool isOpen;
 
         bool readSuperBlock();
-        Inode readInode(int inodeIndex);
+        
         bool readBlockFolder (int blockIndex, BlockFolder& block);
         bool readBlockFile (int blockIndex, BlockFile& block);
 
@@ -34,7 +34,7 @@ class Ext2Reader{
 
         //buscar un archivo por nombre en una carpeta
         bool findFileInFolder(int inodeIndex, const std::string& fileName, int& foundInode);
-
+        Inode readInode(int inodeIndex);
         //leer el archivo users.txt y parsearlo
         bool readUsersFile(std::vector<std::string>& lines);
         Inode readInodePublic(int index) { return readInode(index); }

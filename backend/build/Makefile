@@ -273,6 +273,30 @@ sistema/SistemaArchivos.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.s
 .PHONY : sistema/SistemaArchivos.cpp.s
 
+sistema/api_handler.o: sistema/api_handler.cpp.o
+.PHONY : sistema/api_handler.o
+
+# target to build an object file
+sistema/api_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.o
+.PHONY : sistema/api_handler.cpp.o
+
+sistema/api_handler.i: sistema/api_handler.cpp.i
+.PHONY : sistema/api_handler.i
+
+# target to preprocess a source file
+sistema/api_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.i
+.PHONY : sistema/api_handler.cpp.i
+
+sistema/api_handler.s: sistema/api_handler.cpp.s
+.PHONY : sistema/api_handler.s
+
+# target to generate assembly for a file
+sistema/api_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.s
+.PHONY : sistema/api_handler.cpp.s
+
 src/commands/cat.o: src/commands/cat.cpp.o
 .PHONY : src/commands/cat.o
 
@@ -873,30 +897,6 @@ src/ext2/ext2_writer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.s
 .PHONY : src/ext2/ext2_writer.cpp.s
 
-src/server/api_handler.o: src/server/api_handler.cpp.o
-.PHONY : src/server/api_handler.o
-
-# target to build an object file
-src/server/api_handler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o
-.PHONY : src/server/api_handler.cpp.o
-
-src/server/api_handler.i: src/server/api_handler.cpp.i
-.PHONY : src/server/api_handler.i
-
-# target to preprocess a source file
-src/server/api_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.i
-.PHONY : src/server/api_handler.cpp.i
-
-src/server/api_handler.s: src/server/api_handler.cpp.s
-.PHONY : src/server/api_handler.s
-
-# target to generate assembly for a file
-src/server/api_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.s
-.PHONY : src/server/api_handler.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -924,6 +924,9 @@ help:
 	@echo "... sistema/SistemaArchivos.o"
 	@echo "... sistema/SistemaArchivos.i"
 	@echo "... sistema/SistemaArchivos.s"
+	@echo "... sistema/api_handler.o"
+	@echo "... sistema/api_handler.i"
+	@echo "... sistema/api_handler.s"
 	@echo "... src/commands/cat.o"
 	@echo "... src/commands/cat.i"
 	@echo "... src/commands/cat.s"
@@ -999,9 +1002,6 @@ help:
 	@echo "... src/ext2/ext2_writer.o"
 	@echo "... src/ext2/ext2_writer.i"
 	@echo "... src/ext2/ext2_writer.s"
-	@echo "... src/server/api_handler.o"
-	@echo "... src/server/api_handler.i"
-	@echo "... src/server/api_handler.s"
 .PHONY : help
 
 

@@ -8,6 +8,7 @@ extreamfs: \
   CMakeFiles/extreamfs.dir/parser/Parser.cpp.o \
   CMakeFiles/extreamfs.dir/sistema/Ejecutores.cpp.o \
   CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.o \
+  CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.o \
@@ -33,7 +34,6 @@ extreamfs: \
   CMakeFiles/extreamfs.dir/src/disk/session.cpp.o \
   CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o \
   CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o \
-  CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libpthread.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -81,6 +81,8 @@ CMakeFiles/extreamfs.dir/parser/Parser.cpp.o:
 CMakeFiles/extreamfs.dir/sistema/Ejecutores.cpp.o:
 
 CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.o:
+
+CMakeFiles/extreamfs.dir/sistema/api_handler.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o:
 
@@ -131,8 +133,6 @@ CMakeFiles/extreamfs.dir/src/disk/session.cpp.o:
 CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o:
-
-CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libpthread.a:
 
