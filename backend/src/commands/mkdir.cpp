@@ -116,6 +116,8 @@ bool MKDIR::crearCarpeta(const std::map<std::string, std::string>& params) {
         std::cout << "❌ " << lastError << std::endl;
         return false;
     }
+
+    writer.writeJournal("mkdir", path, "");
     
     writer.close();
     

@@ -7,6 +7,7 @@
 CAT::CAT() {}
 
 bool CAT::leerArchivos(const std::map<std::string, std::string>& params) {
+    output.clear();
     std::cout << "🔍 Leyendo archivos..." << std::endl;
     
     // 1. Verificar sesión activa
@@ -69,6 +70,8 @@ bool CAT::leerArchivos(const std::map<std::string, std::string>& params) {
         
         std::string content;
         if (reader.readFile(fileName, content)) {
+            output += content;
+            if (!content.empty() && content.back() != '\n') output += '\n';
             // Mostrar contenido
             std::cout << content;
             // Asegurar salto de línea al final

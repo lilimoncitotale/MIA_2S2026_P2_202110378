@@ -18,7 +18,6 @@
 #include "../include/commands/mkusr.h"
 #include "../include/commands/rmusr.h"
 #include "../include/commands/chgrp.h"
-#include "../include/commands/rep.h"
 
 //implementacion de parametrosComando
 
@@ -39,6 +38,7 @@ void ParametrosComando::limpiar() {
     grp = "";
     cont = "";
     type_format = "";
+    fs = "";
     r_flag = false;
 
     size_presente = false;
@@ -54,10 +54,8 @@ void ParametrosComando::limpiar() {
     cont_presente = false;
     r_flag_presente = false;
     type_format_presente = false;
-
-
-    files.clear();
-    files_presente = false;
+    fs_presente = false;
+    cat_files.clear();
 }
 
 //constructor y metodos publicos
@@ -117,13 +115,16 @@ bool Parser::analizar() {
     } else if (comando_actual == "MKFILE") {
         resultado = analizarMKFILE();
     } else if (comando_actual == "MKDIR") {      
-    resultado = analizarMKDIR();
-    } else if (comando_actual == "REP") {
-        resultado = analizarREP();
+        resultado = analizarMKDIR();
     } else if (comando_actual == "CAT") {
         resultado = analizarCAT();
-    }
-    else {
+    } else if (comando_actual == "JOURNALING") {
+        resultado = analizarJOURNALING();
+    } else if (comando_actual == "REP") {
+        resultado = analizarREP();
+    } else if (comando_actual == "LOSS") {
+        resultado = analizarLOSS();
+    }else {
         errores.push_back("Comando no reconocido: " + comando_actual);
         return false;
     }
@@ -758,6 +759,21 @@ bool Parser::analizarMKFS(){
                     errores.push_back("Error: Se esperaba un valor para -type, pero se encontro: " + tokens[pos].valor);
                     return false;
                 }
+            }else if (token.valor == "-fs") {
+                pos++;
+                if (!esperarToken(TokenType::IGUAL, "Se esperaba '=' despues de -fs")) return false;
+                if (pos >= static_cast<int>(tokens.size())) {
+                    errores.push_back("Error: Se esperaba un valor para -fs");
+                    return false;
+                }
+                std::string value = tokens[pos].valor;
+                if (value != "2fs" && value != "3fs" && value != "2FS" && value != "3FS") {
+                    errores.push_back("Error: El valor de -fs debe ser 2fs o 3fs");
+                    return false;
+                }
+                parametros.fs = value;
+                parametros.fs_presente = true;
+                pos++;
             }else {
                 errores.push_back("Error: Parametro no reconocido: " + token.valor);
                 return false;
@@ -1154,36 +1170,35 @@ bool Parser::analizarRMUSR(){
                 }
                 pos++;
 
-                if (!esperarToken(TokenType::IGUAL, "Se esperaba '=' despues de -user")) return false;
+                if (!esperarToken(TokenType::IGUAL, "Se esperaba '=' despues de -user"))return false;
 
                 if (pos >= (int)tokens.size()){
                     errores.push_back("Error: Se esperaba un valor para -user");
                     return false;
                 }
 
-                // ✅ Aceptar IDENTIFICADOR, LETRA y CADENA
-                if (tokens[pos].tipo == TokenType::IDENTIFICADOR || 
-                    tokens[pos].tipo == TokenType::LETRA || 
-                    tokens[pos].tipo == TokenType::CADENA){
+                if (tokens[pos].tipo == TokenType::LETRA || tokens[pos].tipo == TokenType::CADENA){
                     
                     parametros.user = tokens[pos].valor;
                     parametros.user_presente = true;
                     user_encontrado = true;
                     pos++;
-                } else {
+
+                }else{
                     errores.push_back("Error: Se esperaba un valor para -user, pero se encontro: " + tokens[pos].valor);
                     return false;
                 }
-            } else {
+            }else {
                 errores.push_back("Error: Parametro no reconocido: " + token.valor);
                 return false;
+
             }
-        } else {
+        }else{
             errores.push_back("Error: Token inesperado: " + token.valor);
             return false;
         }
+
     }
-    
     if (!user_encontrado){
         errores.push_back("Error: Falta el parametro obligatorio -user");
         return false;
@@ -1386,6 +1401,35 @@ bool Parser::analizarMKDIR() {
     return true;
 }
 
+bool Parser::analizarCAT() {
+    bool found = false;
+    while (pos < static_cast<int>(tokens.size()) && tokens[pos].tipo != TokenType::FIN_DE_ARCHIVO) {
+        Token token = tokens[pos];
+        if (token.tipo != TokenType::PARAMETRO || token.valor.rfind("-file", 0) != 0) {
+            errores.push_back("Error: CAT solo acepta parametros -fileN");
+            return false;
+        }
+        if (parametros.cat_files.count(token.valor)) {
+            errores.push_back("Error: Parametro repetido: " + token.valor);
+            return false;
+        }
+        pos++;
+        if (!esperarToken(TokenType::IGUAL, "Se esperaba '=' despues de " + token.valor)) return false;
+        if (pos >= static_cast<int>(tokens.size()) || (tokens[pos].tipo != TokenType::RUTA && tokens[pos].tipo != TokenType::CADENA)) {
+            errores.push_back("Error: Se esperaba una ruta para " + token.valor);
+            return false;
+        }
+        parametros.cat_files[token.valor] = tokens[pos].valor;
+        found = true;
+        pos++;
+    }
+    if (!found) {
+        errores.push_back("Error: CAT requiere al menos un parametro -fileN");
+        return false;
+    }
+    return true;
+}
+
 bool Parser::analizarLOGIN() {
     bool user_encontrado = false;
     bool pass_encontrado = false;
@@ -1499,6 +1543,41 @@ bool Parser::analizarLOGIN() {
 
     return true;
 }
+
+bool Parser::analizarLOGOUT() {
+    // LOGOUT no tiene parámetros
+    while (pos < (int)tokens.size() && tokens[pos].tipo != TokenType::FIN_DE_ARCHIVO) {
+        errores.push_back("Error: LOGOUT no recibe parámetros");
+        return false;
+    }
+
+    return true;
+}
+bool Parser::analizarJOURNALING() {
+    bool id_encontrado = false;
+    while (pos < (int)tokens.size() && tokens[pos].tipo != TokenType::FIN_DE_ARCHIVO) {
+        Token token = tokens[pos];
+        if (token.tipo == TokenType::PARAMETRO && token.valor == "-id") {
+            pos++;
+            if (!esperarToken(TokenType::IGUAL, "Se esperaba '='")) return false;
+            parametros.id = tokens[pos].valor;
+            parametros.id_presente = true;
+            id_encontrado = true;
+            pos++;
+        } else {
+            errores.push_back("Error: Parámetro no reconocido: " + token.valor);
+            return false;
+        }
+    }
+    if (!id_encontrado) {
+        errores.push_back("Error: Falta -id");
+        return false;
+    }
+    return true;
+}
+// ============================================
+// ANALIZAR REP
+// ============================================
 bool Parser::analizarREP() {
     bool name_encontrado = false;
     bool path_encontrado = false;
@@ -1559,7 +1638,6 @@ bool Parser::analizarREP() {
                 id_encontrado = true;
                 pos++;
             } else if (token.valor == "-path_file_ls") {
-                // Usa parametros.cont para esto
                 if (parametros.cont_presente) {
                     errores.push_back("Error: -path_file_ls repetido");
                     return false;
@@ -1567,7 +1645,7 @@ bool Parser::analizarREP() {
                 pos++;
                 if (!esperarToken(TokenType::IGUAL, "Se esperaba '=' después de -path_file_ls")) return false;
                 if (pos >= (int)tokens.size()) {
-                    errores.push_back("Error: Se esperaba un valor");
+                    errores.push_back("Error: Se esperaba un valor para -path_file_ls");
                     return false;
                 }
                 if (tokens[pos].tipo == TokenType::RUTA || tokens[pos].tipo == TokenType::CADENA) {
@@ -1575,73 +1653,7 @@ bool Parser::analizarREP() {
                     parametros.cont_presente = true;
                     pos++;
                 } else {
-                    errores.push_back("Error: Se esperaba una ruta");
-                    return false;
-                }
-            } else {
-                errores.push_back("Error: Parametro no reconocido: " + token.valor);
-                return false;
-            }
-        } else {
-            errores.push_back("Error: Token inesperado: " + token.valor);
-            return false;
-        }
-    }
-    
-    if (!name_encontrado) {
-        errores.push_back("Error: Falta -name");
-        return false;
-    }
-    if (!path_encontrado) {
-        errores.push_back("Error: Falta -path");
-        return false;
-    }
-    if (!id_encontrado) {
-        errores.push_back("Error: Falta -id");
-        return false;
-    }
-    
-    return true;
-}
-bool Parser::analizarCAT() {
-    // CAT no requiere sesión activa según el enunciado,
-    // pero si la tiene, es mejor
-    
-    // PARAMETROS:
-    // -file1, -file2, ..., -fileN: rutas de archivos
-    
-    bool algun_file = false;
-    
-    while (pos < (int)tokens.size() && tokens[pos].tipo != TokenType::FIN_DE_ARCHIVO) {
-        Token token = tokens[pos];
-        
-        if (token.tipo == TokenType::PARAMETRO) {
-            // Verificar si es -fileN
-            if (token.valor.find("-file") == 0 && token.valor.length() > 5) {
-                pos++;
-                
-                if (!esperarToken(TokenType::IGUAL, "Se esperaba '=' después de " + token.valor)) {
-                    return false;
-                }
-                
-                if (pos >= (int)tokens.size()) {
-                    errores.push_back("Error: Se esperaba una ruta para " + token.valor);
-                    return false;
-                }
-                
-                if (tokens[pos].tipo == TokenType::RUTA || tokens[pos].tipo == TokenType::CADENA) {
-                    try {
-                        int num = std::stoi(token.valor.substr(5));
-                        parametros.files[num] = tokens[pos].valor;
-                        parametros.files_presente = true;
-                        algun_file = true;
-                        pos++;
-                    } catch (...) {
-                        errores.push_back("Error: Número inválido en " + token.valor);
-                        return false;
-                    }
-                } else {
-                    errores.push_back("Error: Se esperaba una ruta para " + token.valor);
+                    errores.push_back("Error: Se esperaba una ruta para -path_file_ls");
                     return false;
                 }
             } else {
@@ -1654,20 +1666,61 @@ bool Parser::analizarCAT() {
         }
     }
     
-    if (!algun_file) {
-        errores.push_back("Error: Falta al menos un parámetro -fileN");
+    if (!name_encontrado) {
+        errores.push_back("Error: Falta el parámetro obligatorio -name");
+        return false;
+    }
+    if (!path_encontrado) {
+        errores.push_back("Error: Falta el parámetro obligatorio -path");
+        return false;
+    }
+    if (!id_encontrado) {
+        errores.push_back("Error: Falta el parámetro obligatorio -id");
         return false;
     }
     
     return true;
 }
 
-bool Parser::analizarLOGOUT() {
-    // LOGOUT no tiene parámetros
+// ============================================
+// ANALIZAR LOSS
+// ============================================
+bool Parser::analizarLOSS() {
+    bool id_encontrado = false;
+    
     while (pos < (int)tokens.size() && tokens[pos].tipo != TokenType::FIN_DE_ARCHIVO) {
-        errores.push_back("Error: LOGOUT no recibe parámetros");
+        Token token = tokens[pos];
+        
+        if (token.tipo == TokenType::PARAMETRO) {
+            if (token.valor == "-id") {
+                if (parametros.id_presente) {
+                    errores.push_back("Error: -id repetido");
+                    return false;
+                }
+                pos++;
+                if (!esperarToken(TokenType::IGUAL, "Se esperaba '=' después de -id")) return false;
+                if (pos >= (int)tokens.size()) {
+                    errores.push_back("Error: Se esperaba un valor para -id");
+                    return false;
+                }
+                parametros.id = tokens[pos].valor;
+                parametros.id_presente = true;
+                id_encontrado = true;
+                pos++;
+            } else {
+                errores.push_back("Error: Parámetro no reconocido: " + token.valor);
+                return false;
+            }
+        } else {
+            errores.push_back("Error: Token inesperado: " + token.valor);
+            return false;
+        }
+    }
+    
+    if (!id_encontrado) {
+        errores.push_back("Error: Falta el parámetro obligatorio -id");
         return false;
     }
-
+    
     return true;
 }

@@ -3,6 +3,7 @@
 #include "../../include/ext2/inode.h"
 #include "../../include/ext2/block.h"
 #include "../../include/disk/mounted.h"
+#include "../../include/ext2/journal.h"
 
 #include <iostream>
 #include <fstream>
@@ -13,7 +14,7 @@ MKFS::MKFS(){}
 
 //calcular inodos y bloques
 
-bool MKFS::calcularEstructuras(int partitionSize, int& inodesCount, int& blocksCount){
+bool MKFS::calcularEstructuras(int partitionSize, int fsType, int& inodesCount, int& blocksCount){
     //formula partitionSIze = sizeof(superBlock) + n + 3n + n*sizeof(inode) + 3n*64
 
     //donde n = numero de inodos
@@ -21,9 +22,10 @@ bool MKFS::calcularEstructuras(int partitionSize, int& inodesCount, int& blocksC
     int superBlockSize = sizeof(SuperBlock);
     int inodeSize = sizeof(Inode);
     int blockSize = 64; //sizeof(Block)
+    int journalSize = (fsType == 3) ? JOURNAL_SIZE : 0; //si es ext2 no hay journaling
 
-    //n = (parttitionsize - superBlockSize) / (1 + 3 + inodeSize + 3*blockSize)
-    long long divisor = 1+3+inodeSize + 3*blockSize;
+    
+    long long divisor = journalSize +1+3+inodeSize + 3*blockSize;
     long long numerador = partitionSize - superBlockSize;
 
     if(numerador <= 0){
@@ -43,19 +45,30 @@ bool MKFS::calcularEstructuras(int partitionSize, int& inodesCount, int& blocksC
     std::cout << "   Tamaño partición: " << partitionSize << " bytes" << std::endl;
     std::cout << "   Inodos: " << inodesCount << std::endl;
     std::cout << "   Bloques: " << blocksCount << std::endl;
-    
+    if (fsType == 3){
+        std::cout << "   Journaling: " << JOURNAL_SIZE << " bytes" << std::endl;
+    }
+
     return true;
 
 
 }
 
-void MKFS::calcularPosiciones(int partitionStart, int inodesCount, int blocksCount, int& superblockStart, int& bmInodeStart, int& bmBlockStart, int& inodeTableStart, int& blockTableStart, int& bmINodeSize, int& bmBlockSize){
+void MKFS::calcularPosiciones(int partitionStart, int fsType, int inodesCount, int blocksCount, int& superblockStart, int& journalStart, int& bmInodeStart, int& bmBlockStart, int& inodeTableStart, int& blockTableStart, int& bmINodeSize, int& bmBlockSize){
 
     int currentPos = partitionStart;
 
     //superblock
     superblockStart = currentPos;
     currentPos += sizeof(SuperBlock);
+
+    //journaling solo si es ext3
+    if(fsType == 3){
+        journalStart = currentPos;
+        currentPos += inodesCount * sizeof(Journal);
+    }else{
+        journalStart = -1; //no hay journaling
+    }
 
     //bitmap de inodos (n bits = ceil(n/8) bytes)
     bmINodeSize = (inodesCount + 7) / 8; //ceil(n/8)
@@ -78,8 +91,9 @@ void MKFS::calcularPosiciones(int partitionStart, int inodesCount, int blocksCou
 }
 
 //escribir superblock
-bool MKFS::escribirSuperBlock(std::fstream& file, int partitionStart, int partitionSize, int inodesCount, int blocksCount, int bmInodeStart, int bmBlockStart, int inodeTableStart, int blockTableStart){
+bool MKFS::escribirSuperBlock(std::fstream& file, int partitionStart, int partitionSize,int fsType, int inodesCount, int blocksCount,int journalStart, int bmInodeStart, int bmBlockStart, int inodeTableStart, int blockTableStart){
     SuperBlock sb;
+    sb.s_filesystem_type = fsType; //2 o 3
     sb.s_inodes_count = inodesCount;
     sb.s_blocks_count = blocksCount;
     sb.s_free_inodes_count = inodesCount - 2; //inodo 0 y 1 ya estan ocupados
@@ -109,7 +123,7 @@ bool MKFS::escribirSuperBlock(std::fstream& file, int partitionStart, int partit
         return false;
     }
 
-    std::cout << "  Superblock escrito exitosamente en la particion" << std::endl;
+    std::cout <<"superblock escrito (EXT" << fsType << ")" << std::endl;
     return true;
 }
 
@@ -150,9 +164,28 @@ bool MKFS::inicializarBitmaps(std::fstream& file, int bmInodeStart, int inodeSiz
     
 }
 
+bool MKFS::inicializarJournaling(std::fstream& file, int journalStart, int inodesCount){
+    if(journalStart == -1) return true; //no aplica
+
+    //crear vector de journals vacios
+    std::vector<Journal> journals(inodesCount);
+
+    //escribir todos vacios
+    file.seekp(journalStart, std::ios::beg);
+    file.write(reinterpret_cast<const char*>(journals.data()), inodesCount * sizeof(Journal));
+
+    if(!file.good()){
+        lastError = "Error: No se pudo escribir el area de journaling en la particion";
+        return false;
+    }
+
+    std:: cout << "  Area de journaling inicializada exitosamente" << std::endl;
+    return true;
+}
+
 //crear nodos iniciales
 bool MKFS::crearInodosIniciales(std::fstream& file, int inodeTableStart,int inodeSize, int blockTableStart){
-
+        // int fsType = 2; //default
     //crear vector de inodos(todos vacios)
     std::vector<Inode> inodes(2); //solo necesitamos los primeros 2
 
@@ -189,7 +222,6 @@ bool MKFS::crearInodosIniciales(std::fstream& file, int inodeTableStart,int inod
     std::cout << "📝 Inodo 1 (users.txt):" << std::endl;
     std::cout << "   size=" << inodes[1].i_size << std::endl;
     std::cout << "   type=" << (int)inodes[1].i_type << std::endl;
-    std::cout << "   block[0]=" << inodes[1].i_block[0] << std::endl;
     //escribir los inodos en la tabla
     file.seekp(inodeTableStart, std::ios::beg);
     file.write(reinterpret_cast<const char*>(inodes.data()), 2 * sizeof(Inode));
@@ -264,10 +296,25 @@ bool MKFS::crearBloquesIniciales(std::fstream& file, int blockTableStart){
 
 //metodo principal: formatear
 
-bool MKFS::formatear(const std::string& id, const std::string&type){
-    std::cout << "  Formateando partición EXT2..." << std::endl;
+bool MKFS::formatear(const std::string& id, const std::string&type, const std::string& fs){
+    std::cout << "  Formateando partición " << fs << "..." << std::endl;
     std::cout << "   ID: " << id << std::endl;
     std::cout << "   Tipo: " << type << std::endl;
+
+    //determinar tipo de sistema de archivos
+
+    int fsType = 2; //default
+
+    if (fs == "3fs" || fs == "3FS"){
+        fsType = 3;
+    }else if (fs == "2fs" || fs == "2FS" || fs.empty()){
+        fsType = 2;
+
+    }else{
+        lastError = "Error: Tipo de sistema de archivos no válido. Debe ser 2fs o 3fs";
+        std::cout << "❌ Error: " << lastError << std::endl;
+        return false;
+    }
 
     //buscar la particion en memoria RAM
 
@@ -299,28 +346,40 @@ bool MKFS::formatear(const std::string& id, const std::string&type){
     //calcular inodos y bloques
 
     int inodesCount, blocksCount;
-    if(!calcularEstructuras(partitionSize, inodesCount, blocksCount)){
+    if(!calcularEstructuras(partitionSize, fsType, inodesCount, blocksCount)){
         file.close();
         return false;
     }
 
     //calcular posiciones
-    int superBlockStart, bmInodeStart, bmBlockStart;
+    int superBlockStart, journalStart, bmInodeStart, bmBlockStart;
     int inodeTableStart, blockTableStart;
     int bmInodeSize, bmBlockSize;
 
-    calcularPosiciones(partitionStart, inodesCount, blocksCount, superBlockStart, bmInodeStart, bmBlockStart, inodeTableStart, blockTableStart, bmInodeSize, bmBlockSize); 
+    calcularPosiciones(partitionStart, fsType, inodesCount, blocksCount, superBlockStart,journalStart, bmInodeStart, bmBlockStart, inodeTableStart, blockTableStart, bmInodeSize, bmBlockSize); 
     std::cout << "  Posiciones de estructuras:" << std::endl;
     std::cout << "   SuperBlock: " << superBlockStart << std::endl;
+    if(journalStart != -1){
+        std::cout << "   Journaling: " << journalStart << std::endl;
+
+    }
     std::cout << "   Bitmap Inodos: " << bmInodeStart << " (" << bmInodeSize << " bytes)" << std::endl;
     std::cout << "   Bitmap Bloques: " << bmBlockStart << " (" << bmBlockSize << " bytes)" << std::endl;
     std::cout << "   Tabla Inodos: " << inodeTableStart << std::endl;
     std::cout << "   Tabla Bloques: " << blockTableStart << std::endl;
 
     //escribir superblock
-    if(!escribirSuperBlock(file, partitionStart, partitionSize, inodesCount, blocksCount, bmInodeStart, bmBlockStart, inodeTableStart, blockTableStart)){
+    if(!escribirSuperBlock(file, partitionStart, partitionSize, fsType, inodesCount, blocksCount, journalStart, bmInodeStart, bmBlockStart, inodeTableStart, blockTableStart)){
         file.close();
         return false;
+    }
+
+    //inicializar area de journaling
+    if(!inicializarJournaling(file, journalStart, inodesCount)){
+        file.close();
+        std::cout << "❌ Error: " << lastError << std::endl;
+        return false;
+
     }
 
     if(!inicializarBitmaps(file, bmInodeStart, bmInodeSize, bmBlockStart, bmBlockSize)){
@@ -344,10 +403,14 @@ bool MKFS::formatear(const std::string& id, const std::string&type){
 
     // 10. Mostrar éxito
     std::cout << "=========================================" << std::endl;
-    std::cout << "  Partición formateada exitosamente como EXT2" << std::endl;
+    std::cout << "  Partición formateada exitosamente como " << fs << std::endl;
     std::cout << "   ID: " << id << std::endl;
     std::cout << "   Inodos: " << inodesCount << std::endl;
     std::cout << "   Bloques: " << blocksCount << std::endl;
+    if (fsType == 3){
+        std::cout << "   Journaling: " << inodesCount << " bytes" << std::endl;
+
+    }
     std::cout << "   Tamaño de partición: " << partitionSize << " bytes" << std::endl;
     std::cout << "   Archivo users.txt creado con usuario root" << std::endl;
     std::cout << "=========================================" << std::endl;

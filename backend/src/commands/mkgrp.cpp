@@ -65,6 +65,7 @@ bool MKGRP::crearGrupo(const std::string& name) {
         std::cout << "❌ " << lastError << std::endl;
         return false;
     }
+    writer.writeJournal("mkgrp", "/users.txt", name);
     
     writer.close();
     

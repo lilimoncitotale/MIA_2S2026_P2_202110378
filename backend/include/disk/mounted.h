@@ -43,7 +43,10 @@ public:
                     const std::string& partitionName, 
                     const Partition& partition,
                     const std::string& id);
+    
 
+    //eliminar por ID
+    bool removeById(const std::string& id);
     //buscar por ID
     MountedPartition* findById(const std::string& id);
 

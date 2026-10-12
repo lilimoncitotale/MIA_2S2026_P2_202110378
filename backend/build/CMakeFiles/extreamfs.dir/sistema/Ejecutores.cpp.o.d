@@ -194,7 +194,6 @@ CMakeFiles/extreamfs.dir/sistema/Ejecutores.cpp.o: \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/disk/mbr.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/disk/session.h \
  /usr/include/c++/15/sstream /usr/include/c++/15/bits/sstream.tcc \
- /usr/include/c++/15/iostream \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/mkdir.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/mkfile.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/mkusr.h \
@@ -202,10 +201,12 @@ CMakeFiles/extreamfs.dir/sistema/Ejecutores.cpp.o: \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/mkgrp.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/rmgrp.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/chgrp.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/cat.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/journaling.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/rep.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/../ext2/superblock.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/../ext2/inode.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/../ext2/block.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/../ext2/inode.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/../ext2/block.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/cat.h
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../include/commands/loss.h

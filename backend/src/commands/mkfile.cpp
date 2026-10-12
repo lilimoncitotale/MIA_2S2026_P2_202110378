@@ -159,6 +159,8 @@ bool MKFILE::crearArchivo(const std::map<std::string, std::string>& params) {
         std::cout << "❌ " << lastError << std::endl;
         return false;
     }
+
+    writer.writeJournal("mkfile", path, content.substr(0, 64));
     
     writer.close();
     

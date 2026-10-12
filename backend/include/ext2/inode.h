@@ -27,7 +27,7 @@ struct Inode{
         for (int i = 0; i < 15; i++) {
             i_block[i] = -1; // Inicializar punteros a bloques como -1 (no asignados)
         }
-        i_type = '0'; // Inicializar tipo de archivo como '0' (archivo
+        i_type = 0; // Inicializar tipo de archivo como '0' (archivo
         i_perm[0] = '7'; 
         i_perm[1] = '7';
         i_perm[2] = '7';

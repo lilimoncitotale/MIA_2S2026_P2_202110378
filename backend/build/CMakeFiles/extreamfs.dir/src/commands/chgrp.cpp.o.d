@@ -180,5 +180,6 @@ CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o: \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/../../include/ext2/superblock.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/../../include/ext2/inode.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/../../include/ext2/block.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/../../include/ext2/journal.h \
  /usr/include/c++/15/iostream /usr/include/c++/15/sstream \
  /usr/include/c++/15/bits/sstream.tcc

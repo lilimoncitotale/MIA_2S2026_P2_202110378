@@ -1,8 +1,11 @@
 #include "../../include/ext2/ext2_writer.h"
+#include "../../include/disk/session.h"
+#include "../../include/ext2/journal.h"
 #include <iostream>
 #include <sstream>
 #include <cstring>
 #include <algorithm>
+#include <regex>
 
 Ext2Writer::Ext2Writer() : Ext2Reader() {}
 
@@ -108,6 +111,171 @@ bool Ext2Writer::markBlockOccupied(int blockIndex) {
     return file.good();
 }
 
+std::string Ext2Writer::getLastName(const std::string& path) const {
+    size_t slash = path.find_last_of('/');
+    return slash == std::string::npos ? path : path.substr(slash + 1);
+}
+
+int Ext2Writer::findParentInode(const std::string& path) {
+    size_t slash = path.find_last_of('/');
+    if (slash == std::string::npos || slash == 0) return 0;
+    return findFolderByPath(path.substr(0, slash));
+}
+
+int Ext2Writer::findInodeByPath(const std::string& path) {
+    if (path.empty() || path == "/") return 0;
+    int current = 0;
+    std::stringstream parts(path);
+    std::string part;
+    while (std::getline(parts, part, '/')) {
+        if (part.empty()) continue;
+        int next = -1;
+        if (!findFileInFolder(current, part, next)) return -1;
+        current = next;
+    }
+    return current;
+}
+
+bool Ext2Writer::hasPermission(int inodeIndex, char operation) const {
+    if (g_activeSession.uid == 1) return true;
+    return inodeIndex >= 0;
+}
+
+bool Ext2Writer::freeInode(int inodeIndex) {
+    int byteIndex = inodeIndex / 8;
+    int bitOffset = inodeIndex % 8;
+    int offset = partitionStart + sb.s_bm_inode_start + byteIndex;
+    file.seekg(offset, std::ios::beg);
+    char byte = 0;
+    file.read(&byte, 1);
+    byte &= static_cast<char>(~(1 << bitOffset));
+    file.clear();
+    file.seekp(offset, std::ios::beg);
+    file.write(&byte, 1);
+    return file.good();
+}
+
+bool Ext2Writer::removeEntryFromFolder(int folderInode, const std::string& name) {
+    Inode parent = readInode(folderInode);
+    for (int i = 0; i < 12 && parent.i_block[i] != -1; ++i) {
+        BlockFolder block;
+        if (!readBlockFolder(parent.i_block[i], block)) continue;
+        for (Content& entry : block.b_content) {
+            if (std::string(entry.b_name) == name) {
+                entry = Content();
+                return writeBlockFolder(parent.i_block[i], block);
+            }
+        }
+    }
+    return false;
+}
+
+bool Ext2Writer::matchPattern(const std::string& value, const std::string& pattern) const {
+    std::string expression;
+    for (char c : pattern) {
+        if (c == '*') expression += ".*";
+        else if (c == '?') expression += '.';
+        else expression += std::regex_replace(std::string(1, c), std::regex("([.^$|()\\\\+])"), "\\\\$1");
+    }
+    return std::regex_match(value, std::regex(expression));
+}
+
+// ============================================
+// JOURNALING (REAL)
+// ============================================
+
+bool Ext2Writer::writeJournal(const std::string& operation, 
+                               const std::string& path, 
+                               const std::string& content) {
+    // Solo escribir si es EXT3
+    if (sb.s_filesystem_type != 3) {
+        return true;  // Silenciosamente ignorar en EXT2
+    }
+    
+    // El área de journaling está justo después del SuperBlock
+    int journalStart = partitionStart + sizeof(SuperBlock);
+    
+    // Buscar el primer slot libre
+    for (int i = 0; i < sb.s_inodes_count; i++) {
+        Journal journal;
+        int offset = journalStart + i * sizeof(Journal);
+        
+        file.clear();
+        file.seekg(offset, std::ios::beg);
+        file.read(reinterpret_cast<char*>(&journal), sizeof(Journal));
+        
+        // Si está vacío, usar este slot
+        std::string op(journal.j_content.i_operation);
+        op = op.c_str();
+        
+        if (op.empty()) {
+            // Llenar este slot
+            journal.j_count = i;
+            memset(journal.j_content.i_operation, 0, 10);
+            memset(journal.j_content.i_path, 0, 32);
+            memset(journal.j_content.i_content, 0, 64);
+            
+            strncpy(journal.j_content.i_operation, operation.c_str(), 9);
+            strncpy(journal.j_content.i_path, path.c_str(), 31);
+            strncpy(journal.j_content.i_content, content.c_str(), 63);
+            journal.j_content.i_date = (float)time(nullptr);
+            
+            file.clear();
+            file.seekp(offset, std::ios::beg);
+            file.write(reinterpret_cast<const char*>(&journal), sizeof(Journal));
+            file.flush();
+            
+            return file.good();
+        }
+    }
+    
+    // Si todos están llenos, sobreescribir el primero
+    Journal journal;
+    journal.j_count = 0;
+    memset(journal.j_content.i_operation, 0, 10);
+    memset(journal.j_content.i_path, 0, 32);
+    memset(journal.j_content.i_content, 0, 64);
+    strncpy(journal.j_content.i_operation, operation.c_str(), 9);
+    strncpy(journal.j_content.i_path, path.c_str(), 31);
+    strncpy(journal.j_content.i_content, content.c_str(), 63);
+    journal.j_content.i_date = (float)time(nullptr);
+    
+    file.clear();
+    file.seekp(journalStart, std::ios::beg);
+    file.write(reinterpret_cast<const char*>(&journal), sizeof(Journal));
+    file.flush();
+    
+    return file.good();
+}
+
+bool Ext2Writer::readJournal(std::vector<Journal>& journals) {
+    journals.clear();
+    
+    if (sb.s_filesystem_type != 3) {
+        return false;  // No hay journal en EXT2
+    }
+    
+    int journalStart = partitionStart + sizeof(SuperBlock);
+    
+    for (int i = 0; i < sb.s_inodes_count; i++) {
+        Journal journal;
+        int offset = journalStart + i * sizeof(Journal);
+        
+        file.clear();
+        file.seekg(offset, std::ios::beg);
+        file.read(reinterpret_cast<char*>(&journal), sizeof(Journal));
+        
+        std::string op(journal.j_content.i_operation);
+        op = op.c_str();
+        
+        if (!op.empty()) {
+            journals.push_back(journal);
+        }
+    }
+    
+    return true;
+}
+
 bool Ext2Writer::updateSuperBlock(const SuperBlock& sb) {
     file.seekp(partitionStart, std::ios::beg);
     file.write(reinterpret_cast<const char*>(&sb), sizeof(SuperBlock));
@@ -158,51 +326,33 @@ bool Ext2Writer::readUsersFile(std::vector<std::string>& lines) {
 }
 
 bool Ext2Writer::writeUsersFile(const std::vector<std::string>& lines) {
-    // Construir el contenido
     std::string content;
     for (const auto& line : lines) {
-        if (!line.empty()) {
-            content += line + "\n";
-        }
+        if (!line.empty()) content += line + "\n";
     }
     
-    std::cout << "📝 Escribiendo users.txt (" << content.size() << " bytes)" << std::endl;
-    
-    // Buscar el inodo de users.txt (debe ser el 1)
     int inodeIndex = 1;
     Inode inode = readInode(inodeIndex);
     
-    if (inode.i_type != 1) {
-        return false;
-    }
+    // ✅ Verificar que el inodo sea correcto
+    if (inode.i_type != 1) return false;
     
-    // Calcular cuántos bloques se necesitan
+    // ✅ Calcular cuántos bloques se necesitan
     int numBlocks = (content.size() + 63) / 64;
     if (numBlocks == 0) numBlocks = 1;
     
-    std::cout << "   Bloques necesarios: " << numBlocks << std::endl;
-    
-    // Limpiar apuntadores antiguos (si había más de los que necesitamos)
-    // Pero primero liberar los bloques que ya no se usan
-    // (Por simplicidad, solo asignamos si no existen)
-    
-    // Asignar bloques para el contenido
-    for (int i = 0; i < numBlocks && i < 12; i++) {  // Solo bloques directos
+    // ✅ Asignar bloques
+    for (int i = 0; i < numBlocks && i < 12; i++) {
         int blockIndex = inode.i_block[i];
         
-        // Si no tiene bloque asignado, buscar uno libre
         if (blockIndex == -1) {
             blockIndex = findFreeBlock();
-            if (blockIndex == -1) {
-                std::cerr << "❌ No hay bloques libres" << std::endl;
-                return false;
-            }
+            if (blockIndex == -1) return false;
             inode.i_block[i] = blockIndex;
             markBlockOccupied(blockIndex);
             sb.s_free_blocks_count--;
         }
         
-        // Preparar el bloque
         BlockFile block;
         memset(&block, 0, sizeof(BlockFile));
         
@@ -210,21 +360,11 @@ bool Ext2Writer::writeUsersFile(const std::vector<std::string>& lines) {
         size_t length = std::min<size_t>(64, content.size() - start);
         memcpy(block.b_content, content.c_str() + start, length);
         
-        if (!writeBlockFile(blockIndex, block)) {
-            return false;
-        }
+        writeBlockFile(blockIndex, block);
     }
     
-    // Actualizar el tamaño del inodo
     inode.i_size = content.size();
-    inode.i_mtime = time(nullptr);
-    
-    // Escribir el inodo actualizado
-    if (!writeInode(inodeIndex, inode)) {
-        return false;
-    }
-    
-    // Actualizar SuperBlock
+    writeInode(inodeIndex, inode);
     updateSuperBlock(sb);
     
     return true;

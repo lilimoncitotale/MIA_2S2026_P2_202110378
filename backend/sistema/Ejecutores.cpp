@@ -11,7 +11,6 @@
 #include <fstream>
 #include <cstdio>
 #include <map>
-#include <iostream>
 #include "../include/commands/mkdir.h"
 #include "../include/commands/mkfile.h"
 #include "../include/commands/mkusr.h"
@@ -19,8 +18,10 @@
 #include "../include/commands/mkgrp.h"
 #include "../include/commands/rmgrp.h"
 #include "../include/commands/chgrp.h"
-#include "../include/commands/rep.h"
 #include "../include/commands/cat.h"
+#include "../include/commands/journaling.h"
+#include "../include/commands/rep.h"
+#include "../include/commands/loss.h"
 
 // ============================================
 // IMPLEMENTACIÓN DE RMDISK
@@ -77,50 +78,42 @@ std::string ejecutarMKDISK(const ParametrosComando& params) {
 // ============================================
 // IMPLEMENTACIÓN DE FDISK
 // ============================================
-// En sistema/Ejecutores.cpp
 std::string ejecutarFDISK(const ParametrosComando& params) {
     std::stringstream output;
     
     try {
         if (!params.path_presente) {
-            output << "❌ Error: Falta -path" << std::endl;
+            output << " Error: Falta -path" << std::endl;
             return output.str();
         }
         if (!params.name_presente) {
-            output << "❌ Error: Falta -name" << std::endl;
+            output << " Error: Falta -name" << std::endl;
             return output.str();
         }
         if (!params.size_presente) {
-            output << "❌ Error: Falta -size" << std::endl;
+            output << " Error: Falta -size" << std::endl;
             return output.str();
         }
         
         Fdisk fdisk;
         
-        int size = std::stoi(params.size);  // ← Tamaño SIN convertir
+        int size = std::stoi(params.size);
         std::string unit = params.unit_presente ? params.unit : "M";
         std::string fit = params.fit_presente ? params.fit : "WF";
         std::string type = params.type_presente ? params.type : "P";
         std::string path = params.path;
         std::string name = params.name;
         
-        // ✅ NO convertir aquí. Fdisk lo hace internamente.
-        char unitChar = unit[0];
-        char fitChar = fit[0];
-        char typeChar = type[0];
-        
-        std::cout << "🔍 Enviando a Fdisk: size=" << size << ", unit=" << unitChar << std::endl;
-        
-        if (fdisk.crearParticion(path, size, fitChar, unitChar, typeChar, name)) {
-            output << "✅ Partición creada exitosamente" << std::endl;
+        if (fdisk.crearParticion(path, size, fit[0], unit[0], type[0], name)) {
+            output << " Partición creada exitosamente" << std::endl;
             output << "   Nombre: " << name << std::endl;
             output << "   Tipo: " << type << std::endl;
         } else {
-            output << "❌ Error: " << fdisk.getLastError() << std::endl;
+            output << " Error: No se pudo crear la partición" << std::endl;
         }
         
     } catch (const std::exception& e) {
-        output << "❌ Error: " << e.what() << std::endl;
+        output << " Error: " << e.what() << std::endl;
     }
     
     return output.str();
@@ -212,8 +205,9 @@ std::string ejecutarMKFS(const ParametrosComando& params) {
         std::string id = params.id;
         std::string type = params.type_format_presente ? params.type_format : "full";
         
-        if (mkfs.formatear(id, type)) {
-            output << "Partición formateada exitosamente como EXT2" << std::endl;
+        std::string fs = params.fs_presente ? params.fs : "2fs";
+        if (mkfs.formatear(id, type, fs)) {
+            output << "Partición formateada exitosamente" << std::endl;
         } else {
             output << " Error: " << mkfs.getLastError() << std::endl;
         }
@@ -352,6 +346,12 @@ std::string ejecutarMKDIR(const ParametrosComando& params) {
     return output.str();
 }
 
+std::string ejecutarCAT(const ParametrosComando& params) {
+    CAT command;
+    if (command.leerArchivos(params.cat_files)) return command.getOutput();
+    return "Error: " + command.getLastError() + "\n";
+}
+
 std::string ejecutarMKGRP(const ParametrosComando& params) {
     MKGRP command;
     return command.crearGrupo(params.name) ? " Grupo creado exitosamente\n" : "Error: " + command.getLastError() + "\n";
@@ -366,6 +366,17 @@ std::string ejecutarCHGRP(const ParametrosComando& params) {
     CHGRP command;
     return command.cambiarGrupo(params.user, params.grp) ? " Grupo cambiado exitosamente\n" : "Error: " + command.getLastError() + "\n";
 }
+std::string ejecutarJOURNALING(const ParametrosComando& params) {
+    std::stringstream output;
+    Journaling j;
+    if (j.mostrar(params.id)) {
+        output << "✅ Journaling mostrado\n";
+    } else {
+        output << "❌ " << j.getLastError() << "\n";
+    }
+    return output.str();
+}
+
 // ============================================
 // IMPLEMENTACIÓN DE REP
 // ============================================
@@ -410,25 +421,24 @@ std::string ejecutarREP(const ParametrosComando& params) {
     
     return output.str();
 }
-std::string ejecutarCAT(const ParametrosComando& params) {
+
+// ============================================
+// IMPLEMENTACIÓN DE LOSS
+// ============================================
+std::string ejecutarLOSS(const ParametrosComando& params) {
     std::stringstream output;
     
     try {
-        if (!params.files_presente) {
-            output << "❌ Error: Falta al menos un -fileN" << std::endl;
+        if (!params.id_presente) {
+            output << "❌ Error: Falta -id" << std::endl;
             return output.str();
         }
         
-        CAT cat;
-        std::map<std::string, std::string> cmdParams;
-        for (const auto& [num, path] : params.files) {
-            cmdParams["-file" + std::to_string(num)] = path;
-        }
-        
-        if (cat.leerArchivos(cmdParams)) {
-            output << "✅ Archivos leídos exitosamente" << std::endl;
+        Loss l;
+        if (l.simular(params.id)) {
+            output << "✅ LOSS aplicado a la partición " << params.id << std::endl;
         } else {
-            output << "❌ Error: " << cat.getLastError() << std::endl;
+            output << "❌ Error: " << l.getLastError() << std::endl;
         }
         
     } catch (const std::exception& e) {

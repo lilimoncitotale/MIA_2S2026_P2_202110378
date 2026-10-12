@@ -199,10 +199,4 @@ CMakeFiles/extreamfs.dir/parser/Parser.cpp.o: \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/rmgrp.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/mkusr.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/rmusr.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/chgrp.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/rep.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/../ext2/superblock.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/../ext2/inode.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/../ext2/block.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/../ext2/inode.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/../ext2/block.h
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../include/commands/chgrp.h

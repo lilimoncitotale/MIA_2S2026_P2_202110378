@@ -61,7 +61,7 @@ bool Fdisk::crearParticion(const std::string& path, int size, char fit, char uni
                 std::cout << "   Necesario: " << size << " bytes" << std::endl;
 
                 if (size > disponible){
-                    std::cout << "Error: No hay espacio suficiente en la particion extendida para crear la logica." << std::endl;
+                    std::cout << "Error: No hay espacio suficiente en la parPticion extendida para crear la logica." << std::endl;
                     file.close();
                     return false;
 
@@ -230,6 +230,136 @@ bool Fdisk::validarParticion(const MBR& mbr, char type){
     
     return true;
 
+}
+
+//buscamos un espacio libre en el disco para la particion
+bool Fdisk::eliminarParticion(const std::string& path, const std::string& name,
+                               const std::string& modo) {
+    std::fstream file(path, std::ios::in | std::ios::out | std::ios::binary);
+    if (!file.is_open()) {
+        lastError = "No se pudo abrir el disco";
+        return false;
+    }
+    
+    MBR mbr;
+    file.seekg(0, std::ios::beg);
+    file.read(reinterpret_cast<char*>(&mbr), sizeof(MBR));
+    
+    int slot = -1;
+    for (int i = 0; i < 4; i++) {
+        std::string pName(mbr.mbr_partitions[i].part_name);
+        pName = pName.c_str();
+        if (pName == name) {
+            slot = i;
+            break;
+        }
+    }
+    
+    if (slot == -1) {
+        lastError = "Partición no encontrada: " + name;
+        file.close();
+        return false;
+    }
+    
+    Partition& p = mbr.mbr_partitions[slot];
+    
+    // Si es extendida, eliminar lógicas también
+    if (p.part_type == 'E') {
+        std::cout << " Eliminando partición extendida y sus lógicas" << std::endl;
+    }
+    
+    // Si es "full", llenar con ceros
+    if (modo == "full") {
+        std::vector<char> zeros(p.part_size, 0);
+        file.seekp(p.part_start, std::ios::beg);
+        file.write(zeros.data(), p.part_size);
+    }
+    
+    // Marcar como vacía en el MBR
+    p.part_status = '0';
+    p.part_type = 'P';
+    p.part_fit = 'F';
+    p.part_start = 0;
+    p.part_size = 0;
+    memset(p.part_name, 0, 16);
+    p.part_correlative = -1;
+    memset(p.part_id, 0, 4);
+    
+    // Escribir MBR
+    file.seekp(0, std::ios::beg);
+    file.write(reinterpret_cast<const char*>(&mbr), sizeof(MBR));
+    file.close();
+    
+    std::cout << "Partición eliminada: " << name << std::endl;
+    return true;
+}
+
+bool Fdisk::agregarEspacio(const std::string& path, const std::string& name, int size) {
+    std::fstream file(path, std::ios::in | std::ios::out | std::ios::binary);
+    if (!file.is_open()) {
+        lastError = "No se pudo abrir el disco";
+        return false;
+    }
+    
+    MBR mbr;
+    file.seekg(0, std::ios::beg);
+    file.read(reinterpret_cast<char*>(&mbr), sizeof(MBR));
+    
+    int slot = -1;
+    for (int i = 0; i < 4; i++) {
+        std::string pName(mbr.mbr_partitions[i].part_name);
+        pName = pName.c_str();
+        if (pName == name) {
+            slot = i;
+            break;
+        }
+    }
+    
+    if (slot == -1) {
+        lastError = "Partición no encontrada: " + name;
+        file.close();
+        return false;
+    }
+    
+    Partition& p = mbr.mbr_partitions[slot];
+    
+    // Si es positivo, verificar espacio libre después
+    if (size > 0) {
+        // Buscar siguiente partición o fin del disco
+        int nextStart = mbr.mbr_size;
+        for (int i = 0; i < 4; i++) {
+            if (i == slot) continue;
+            if (mbr.mbr_partitions[i].part_size > 0 &&
+                mbr.mbr_partitions[i].part_start > p.part_start &&
+                mbr.mbr_partitions[i].part_start < nextStart) {
+                nextStart = mbr.mbr_partitions[i].part_start;
+            }
+        }
+        
+        int espacioLibre = nextStart - (p.part_start + p.part_size);
+        if (size > espacioLibre) {
+            lastError = "No hay suficiente espacio libre";
+            file.close();
+            return false;
+        }
+    } else {
+        // Si es negativo, verificar que no quede negativo
+        if (p.part_size + size <= 0) {
+            lastError = "El tamaño de la partición no puede ser negativo";
+            file.close();
+            return false;
+        }
+    }
+    
+    p.part_size += size;
+    
+    file.seekp(0, std::ios::beg);
+    file.write(reinterpret_cast<const char*>(&mbr), sizeof(MBR));
+    file.close();
+    
+    std::cout << "✅ Espacio modificado: " << name 
+              << " (" << (size > 0 ? "+" : "") << size << " bytes)" << std::endl;
+    return true;
 }
 
 int Fdisk::buscarEspacio(const MBR& mbr, int size, char fit){

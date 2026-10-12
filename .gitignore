@@ -1,8 +1,18 @@
-frontend/node_modules/
-frontend/dist/
-backend/servidor
+# Build
+build/
 *.o
-*.obj
-*.exe
 *.out
+
+# Node
+node_modules/
+package-lock.json
+
+# Discos virtuales
+*.mia
+
+# VSCode
+.vscode/
+
+# Sistema
 .DS_Store
+*.log

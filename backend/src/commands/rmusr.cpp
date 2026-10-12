@@ -95,6 +95,7 @@ bool RMUSR::eliminarUsuario(const std::string& username) {
         return false;
     }
     
+    writer.writeJournal("rmusr", "/users.txt", username);
     writer.close();
     
     std::cout << "✅ Usuario eliminado exitosamente:" << std::endl;

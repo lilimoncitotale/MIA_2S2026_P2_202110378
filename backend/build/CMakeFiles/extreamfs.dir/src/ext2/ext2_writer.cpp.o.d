@@ -176,6 +176,11 @@ CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o: \
  /usr/include/string.h /usr/include/strings.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/ext2/inode.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/ext2/block.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/ext2/journal.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/disk/session.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/disk/mbr.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/disk/partition.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/ext2/journal.h \
  /usr/include/c++/15/iostream /usr/include/c++/15/sstream \
  /usr/include/c++/15/bits/sstream.tcc /usr/include/c++/15/algorithm \
  /usr/include/c++/15/bits/stl_algo.h \
@@ -184,4 +189,33 @@ CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o: \
  /usr/include/c++/15/bits/uniform_int_dist.h \
  /usr/include/c++/15/bits/stl_tempbuf.h \
  /usr/include/c++/15/pstl/glue_algorithm_defs.h \
- /usr/include/c++/15/pstl/execution_defs.h
+ /usr/include/c++/15/pstl/execution_defs.h /usr/include/c++/15/regex \
+ /usr/include/c++/15/bitset /usr/include/c++/15/locale \
+ /usr/include/c++/15/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/15/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/15/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/15/bits/locale_conv.h /usr/include/c++/15/stack \
+ /usr/include/c++/15/deque /usr/include/c++/15/bits/stl_deque.h \
+ /usr/include/c++/15/bits/deque.tcc /usr/include/c++/15/bits/stl_stack.h \
+ /usr/include/c++/15/ext/aligned_buffer.h \
+ /usr/include/c++/15/bits/shared_ptr.h \
+ /usr/include/c++/15/bits/shared_ptr_base.h \
+ /usr/include/c++/15/bits/allocated_ptr.h \
+ /usr/include/c++/15/bits/unique_ptr.h \
+ /usr/include/c++/15/ext/concurrence.h \
+ /usr/include/c++/15/bits/std_function.h \
+ /usr/include/c++/15/bits/stl_tree.h \
+ /usr/include/c++/15/bits/node_handle.h \
+ /usr/include/c++/15/bits/stl_map.h \
+ /usr/include/c++/15/bits/regex_constants.h \
+ /usr/include/c++/15/bits/regex_error.h \
+ /usr/include/c++/15/bits/regex_automaton.h \
+ /usr/include/c++/15/bits/regex_automaton.tcc \
+ /usr/include/c++/15/bits/regex_scanner.h \
+ /usr/include/c++/15/bits/regex_scanner.tcc \
+ /usr/include/c++/15/bits/regex_compiler.h \
+ /usr/include/c++/15/bits/regex_compiler.tcc \
+ /usr/include/c++/15/bits/regex.h /usr/include/c++/15/bits/regex.tcc \
+ /usr/include/c++/15/bits/regex_executor.h \
+ /usr/include/c++/15/bits/regex_executor.tcc

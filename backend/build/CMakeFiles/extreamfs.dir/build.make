@@ -198,10 +198,38 @@ CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/fdisk.cpp" -o CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.s
 
+CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o: CMakeFiles/extreamfs.dir/flags.make
+CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/fs_commands.cpp
+CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/fs_commands.cpp"
+
+CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/fs_commands.cpp" > CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.i
+
+CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/fs_commands.cpp" -o CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.s
+
+CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o: CMakeFiles/extreamfs.dir/flags.make
+CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/journaling.cpp
+CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/journaling.cpp"
+
+CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/journaling.cpp" > CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.i
+
+CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/journaling.cpp" -o CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.s
+
 CMakeFiles/extreamfs.dir/src/commands/login.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/login.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/login.cpp
 CMakeFiles/extreamfs.dir/src/commands/login.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/login.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/login.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/login.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/login.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/login.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/login.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/login.cpp.i: cmake_force
@@ -215,7 +243,7 @@ CMakeFiles/extreamfs.dir/src/commands/login.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/logout.cpp
 CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/logout.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/logout.cpp.i: cmake_force
@@ -226,10 +254,24 @@ CMakeFiles/extreamfs.dir/src/commands/logout.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/commands/logout.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/logout.cpp" -o CMakeFiles/extreamfs.dir/src/commands/logout.cpp.s
 
+CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o: CMakeFiles/extreamfs.dir/flags.make
+CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/loss.cpp
+CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/loss.cpp"
+
+CMakeFiles/extreamfs.dir/src/commands/loss.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/extreamfs.dir/src/commands/loss.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/loss.cpp" > CMakeFiles/extreamfs.dir/src/commands/loss.cpp.i
+
+CMakeFiles/extreamfs.dir/src/commands/loss.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/commands/loss.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/loss.cpp" -o CMakeFiles/extreamfs.dir/src/commands/loss.cpp.s
+
 CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mkdir.cpp
 CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mkdir.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.i: cmake_force
@@ -243,7 +285,7 @@ CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mkdisk.cpp
 CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mkdisk.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.i: cmake_force
@@ -257,7 +299,7 @@ CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mkfile.cpp
 CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mkfile.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.i: cmake_force
@@ -271,7 +313,7 @@ CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mkfs.cpp
 CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mkfs.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.i: cmake_force
@@ -285,7 +327,7 @@ CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mkgrp.cpp
 CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mkgrp.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.i: cmake_force
@@ -299,7 +341,7 @@ CMakeFiles/extreamfs.dir/src/commands/mkgrp.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mkusr.cpp
 CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mkusr.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.i: cmake_force
@@ -313,7 +355,7 @@ CMakeFiles/extreamfs.dir/src/commands/mkusr.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mount.cpp
 CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mount.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mount.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mount.cpp.i: cmake_force
@@ -327,7 +369,7 @@ CMakeFiles/extreamfs.dir/src/commands/mount.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/mounted.cpp
 CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/mounted.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.i: cmake_force
@@ -341,7 +383,7 @@ CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/rep.cpp
 CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/rep.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/rep.cpp.i: cmake_force
@@ -355,7 +397,7 @@ CMakeFiles/extreamfs.dir/src/commands/rep.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/rmgrp.cpp
 CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/rmgrp.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.i: cmake_force
@@ -369,7 +411,7 @@ CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/rmusr.cpp
 CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/rmusr.cpp"
 
 CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.i: cmake_force
@@ -380,10 +422,24 @@ CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/rmusr.cpp" -o CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.s
 
+CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o: CMakeFiles/extreamfs.dir/flags.make
+CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/unmount.cpp
+CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o -MF CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o.d -o CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/unmount.cpp"
+
+CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/unmount.cpp" > CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.i
+
+CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/commands/unmount.cpp" -o CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.s
+
 CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/disk/diskManager.cpp
 CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o -MF CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o.d -o CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/disk/diskManager.cpp"
 
 CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.i: cmake_force
@@ -397,7 +453,7 @@ CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/disk/ebr.cpp
 CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o -MF CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o.d -o CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/disk/ebr.cpp"
 
 CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.i: cmake_force
@@ -411,7 +467,7 @@ CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/disk/session.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/disk/session.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/disk/session.cpp
 CMakeFiles/extreamfs.dir/src/disk/session.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/extreamfs.dir/src/disk/session.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/extreamfs.dir/src/disk/session.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/disk/session.cpp.o -MF CMakeFiles/extreamfs.dir/src/disk/session.cpp.o.d -o CMakeFiles/extreamfs.dir/src/disk/session.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/disk/session.cpp"
 
 CMakeFiles/extreamfs.dir/src/disk/session.cpp.i: cmake_force
@@ -425,7 +481,7 @@ CMakeFiles/extreamfs.dir/src/disk/session.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/ext2_reader.cpp
 CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o -MF CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o.d -o CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/ext2/ext2_reader.cpp"
 
 CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.i: cmake_force
@@ -439,7 +495,7 @@ CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.s: cmake_force
 CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o: CMakeFiles/extreamfs.dir/flags.make
 CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/ext2_writer.cpp
 CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o -MF CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o.d -o CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/ext2/ext2_writer.cpp"
 
 CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.i: cmake_force
@@ -449,6 +505,20 @@ CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.i: cmake_force
 CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/ext2/ext2_writer.cpp" -o CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.s
+
+CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o: CMakeFiles/extreamfs.dir/flags.make
+CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o: /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/server/api_handler.cpp
+CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o: CMakeFiles/extreamfs.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o -MF CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o.d -o CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o -c "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/server/api_handler.cpp"
+
+CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/server/api_handler.cpp" > CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.i
+
+CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lilimon/Documents/Archivos/Proyecto 1/backend/src/server/api_handler.cpp" -o CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.s
 
 # Object files for target extreamfs
 extreamfs_OBJECTS = \
@@ -461,8 +531,11 @@ extreamfs_OBJECTS = \
 "CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.o" \
+"CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o" \
+"CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/login.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o" \
+"CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o" \
@@ -474,11 +547,13 @@ extreamfs_OBJECTS = \
 "CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o" \
+"CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/disk/session.cpp.o" \
 "CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o" \
-"CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o"
+"CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o" \
+"CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o"
 
 # External object files for target extreamfs
 extreamfs_EXTERNAL_OBJECTS =
@@ -492,8 +567,11 @@ extreamfs: CMakeFiles/extreamfs.dir/sistema/SistemaArchivos.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.o
+extreamfs: CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o
+extreamfs: CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/login.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o
+extreamfs: CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o
@@ -505,15 +583,17 @@ extreamfs: CMakeFiles/extreamfs.dir/src/commands/mounted.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o
+extreamfs: CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/disk/session.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o
+extreamfs: CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o
 extreamfs: CMakeFiles/extreamfs.dir/build.make
 extreamfs: CMakeFiles/extreamfs.dir/compiler_depend.ts
 extreamfs: CMakeFiles/extreamfs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable extreamfs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/lilimon/Documents/Archivos/Proyecto 1/backend/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable extreamfs"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/extreamfs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

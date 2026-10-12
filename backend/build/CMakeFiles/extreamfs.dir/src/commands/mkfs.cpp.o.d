@@ -181,6 +181,7 @@ CMakeFiles/extreamfs.dir/src/commands/mkfs.cpp.o: \
  /usr/include/c++/15/bits/vector.tcc \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/../../include/disk/mbr.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/../../include/disk/partition.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/commands/../../include/ext2/journal.h \
  /usr/include/c++/15/iostream /usr/include/c++/15/cmath \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \

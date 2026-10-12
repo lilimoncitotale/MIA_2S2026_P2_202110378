@@ -21,7 +21,7 @@ file(GLOB_RECURSE SOURCES
     "sistema/*.cpp"
     "lexer/*.cpp"
     "parser/*.cpp"
-    "main.cpp" 
+    "main.cpp"
 )
 
 # Crear ejecutable

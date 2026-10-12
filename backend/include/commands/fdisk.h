@@ -20,6 +20,9 @@ class Fdisk{
     int buscarEspacio(const MBR& mbr, int size, char fit);
     std::vector<EspacioLibre> calcularEspaciosLibres(const MBR& mbr);
     int calcularEspacioLogicas(std::fstream& file, const Partition& extendida);
+    bool agregarEspacio(const std::string& path, const std::string& name, int size);
+    bool eliminarParticion(const std::string& path, const std::string& name, 
+                        const std::string& modo);
 
     public:
     //validamos que se pueda crear la particion

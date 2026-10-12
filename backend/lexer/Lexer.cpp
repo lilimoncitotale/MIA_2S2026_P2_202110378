@@ -1,4 +1,5 @@
 #include "Lexer.h"
+#include <algorithm>
 #include <cctype>
 #include <iostream>
 #include <vector>  
@@ -116,7 +117,9 @@ void Lexer::agregarError(const std::string& mensaje) {
 bool Lexer::esComando(const std::string& palabra) {
     std::vector<std::string> comandos = {
         "MKDISK", "RMDISK", "FDISK", "MOUNT", 
-        "MKFS", "MOUNTED", "LOGIN", "LOGOUT", "MKGRP", "RMGRP", "MKUSR", "RMUSR", "CHGRP", "MKDIR", "MKFILE", "REP", "CAT"
+        "MKFS", "MOUNTED", "LOGIN", "LOGOUT", "MKGRP", "RMGRP", "MKUSR", "RMUSR", "CHGRP", "MKDIR", "MKFILE", "CAT",
+        "REP","UNMOUNT", "JOURNALING", "LOSS", "REMOVE", "RENAME", "COPY",
+        "MOVE", "FIND", "CHOWN"
     };
 
     for (const auto& cmd : comandos) {
@@ -130,7 +133,8 @@ bool Lexer::esComando(const std::string& palabra) {
 bool Lexer::esParametroValido(const std::string& parametro) {
     std::vector<std::string> parametrosValidos = {
         "-size", "-unit", "-fit", "-path", "-type", "-name",
-        "-user", "-pass", "-grp", "-r", "-p", "-cont", "-id", "-path_file_ls"
+        "-user", "-pass", "-grp", "-r", "-p", "-cont", "-id", "-fs", "-delete", "-add", "-destino", "-usuario", "-path_file_ls",
+        
     };
 
     for (const auto& p : parametrosValidos) {
@@ -138,16 +142,8 @@ bool Lexer::esParametroValido(const std::string& parametro) {
             return true;
         }
     }
-
-       // ✅ Parámetros dinámicos: -fileN (file1, file2, ...)
-    if (parametro.find("-file") == 0 && parametro.length() > 5) {
-        std::string numStr = parametro.substr(5);
-        // Verificar que el resto sean dígitos
-        bool esNumero = !numStr.empty();
-        for (char c : numStr) {
-            if (!isdigit(c)) { esNumero = false; break; }
-        }
-        if (esNumero) return true;
+    if (parametro.rfind("-file", 0) == 0 && parametro.size() > 5) {
+        return std::all_of(parametro.begin() + 5, parametro.end(), [](char c) { return std::isdigit(static_cast<unsigned char>(c)); });
     }
     return false;
 }

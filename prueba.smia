@@ -1,54 +1,58 @@
-# ============================================
-# SCRIPT DE PRUEBA - MKFILE Y MKDIR
-# ============================================
-
-# 1. Crear disco y partición
-mkdisk -path=/home/usuario/DiscoTest.mia -size=10 -unit=M -fit=FF
-fdisk -path=/home/usuario/DiscoTest.mia -name=Root -size=8 -unit=M -type=P -fit=BF
-
-# 2. Montar y formatear
-mount -path=/home/usuario/DiscoTest.mia -name=Root
-# → ID: 341A (ajustar según carnet)
-mkfs -id=341A -type=full
-
-# 3. Iniciar sesión como root
-login -user=root -pass=123 -id=341A
-
-# 4. Crear carpetas
-mkdir -path=/home -p
-mkdir -path=/home/usuario -p
-mkdir -path=/home/usuario/documentos -p
-mkdir -path=/var -p
-mkdir -path=/var/log -p
-mkdir -path=/tmp -p
-
-# 5. Crear archivos
-mkfile -path=/home/usuario/archivo1.txt -size=50
-mkfile -path=/home/usuario/archivo2.txt -size=100
-mkfile -path=/home/usuario/documentos/informe.txt -size=200
-mkfile -path=/var/log/sistema.log -size=500
-mkfile -path=/tmp/temp.txt -size=30
-
-# 6. Crear archivo con contenido de la PC
-# echo "Este es un archivo de prueba" > /home/usuario/contenido.txt
-mkfile -path=/home/usuario/desde_pc.txt -cont=/home/usuario/contenido.txt
-
-# 7. Crear usuario y grupo
-mkgrp -name=testers
-mkusr -user=tester1 -pass=test123 -grp=testers
-
-# 8. Cerrar sesión
+mkdisk -path=/tmp/MIA_P2/DiscoA.mia -size=15 -unit=M -fit=FF
+mkdisk -path=/tmp/MIA_P2/DiscoB.mia -size=10 -unit=M -fit=BF
+mkdir -p /home/usac
+mkdir -p /home/usac/mia
+mkdir -p /home/usac/mia/p2
+fdisk -path=/tmp/MIA_P2/DiscoA.mia -name=Primaria1 -size=4 -unit=M -type=P -fit=BF
+fdisk -path=/tmp/MIA_P2/DiscoA.mia -name=Extendida1 -size=8 -unit=M -type=E -fit=WF
+fdisk -path=/tmp/MIA_P2/DiscoA.mia -name=Logica1 -size=2 -unit=M -type=L -fit=FF
+fdisk -path=/tmp/MIA_P2/DiscoA.mia -name=Logica2 -size=2 -unit=M -type=L -fit=BF
+fdisk -path=/tmp/MIA_P2/DiscoB.mia -name=Primaria2 -size=4 -unit=M -type=P -fit=FF
+mount -path=/tmp/MIA_P2/DiscoA.mia -name=Primaria1
+mount -path=/tmp/MIA_P2/DiscoB.mia -name=Primaria2
+mounted
+mkfs -id=781A -fs=3fs -type=full
+mkfs -id=781B -fs=2fs -type=full
+login -user=root -pass=123 -id=781A
+cat -file1=/users.txt
+mkgrp -name=devs
+mkgrp -name=qa
+mkusr -user=user1 -pass=1234 -grp=devs
+mkusr -user=user2 -pass=5678 -grp=qa
+cat -file1=/users.txt
+mkdir -p -path=/home/usac/mia/p2/docs
+mkdir -path=/home/usac/mia/p2/docs/scripts
+mkfile -path=/home/usac/mia/p2/a.txt -size=100
+mkfile -path=/home/usac/mia/p2/hosts.txt -cont=/etc/hosts
+mkfile -path=/home/usac/mia/p2/grande.txt -size=900
+mkfile -path=/home/usac/mia/p2/docs/b.txt -size=64
+cat -file1=/home/usac/mia/p2/a.txt
+rename -path=/home/usac/mia/p2/a.txt -name=a_renombrado.txt
+copy -path=/home/usac/mia/p2/a_renombrado.txt -destino=/home/usac/mia/p2/copia.txt
+move -path=/home/usac/mia/p2/copia.txt -destino=/home/usac/mia/p2/movido.txt
+find -path=/home/usac -name=*.txt
+find -path=/home -name=a_*
+cat -file1=/users.txt
+chown -path=/home/usac/mia/p2/a_renombrado.txt -usuario=user1
+remove -path=/home/usac/mia/p2/movido.txt
+cat -file1=/users.txt
+journaling -id=781A
+rep -id=781A -path=/tmp/MIA_P2/reportes/mbr.jpg -name=mbr
+rep -id=781A -path=/tmp/MIA_P2/reportes/disk.jpg -name=disk
+rep -id=781A -path=/tmp/MIA_P2/reportes/sb.jpg -name=sb
+rep -id=781A -path=/tmp/MIA_P2/reportes/inode.jpg -name=inode
+rep -id=781A -path=/tmp/MIA_P2/reportes/block.jpg -name=block
+rep -id=781A -path=/tmp/MIA_P2/reportes/bm_inode.txt -name=bm_inode
+rep -id=781A -path=/tmp/MIA_P2/reportes/bm_block.txt -name=bm_block
+rep -id=781A -path=/tmp/MIA_P2/reportes/tree.jpg -name=tree
+rep -id=781A -path=/tmp/MIA_P2/reportes/file.txt -name=file -path_file_ls=/users.txt
+rep -id=781A -path=/tmp/MIA_P2/reportes/ls.jpg -name=ls -path_file_ls=/
+loss -id=781A
+rep -id=781A -path=/tmp/MIA_P2/reportes/bm_inode_post_loss.txt -name=bm_inode
+journaling -id=781A
+rmusr -user=user2
+rmgrp -name=qa
+cat -file1=/users.txt
 logout
-
-# 9. Iniciar sesión como tester1
-login -user=tester1 -pass=test123 -id=341A
-
-# 10. Crear archivos como tester1
-mkdir -path=/home/usuario/tester1 -p
-mkfile -path=/home/usuario/tester1/prueba.txt -size=25
-
-# 11. Cerrar sesión
-logout
-
-# ============================================
-echo "✅ Prueba completada!"
+unmount -id=781B
+mounted

@@ -8,6 +8,7 @@
 class CAT {
 private:
     std::string lastError;
+    std::string output;
     
 public:
     CAT();
@@ -16,6 +17,7 @@ public:
     bool leerArchivos(const std::map<std::string, std::string>& params);
     
     std::string getLastError() const { return lastError; }
+    std::string getOutput() const { return output; }
 };
 
 #endif

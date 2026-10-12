@@ -133,39 +133,29 @@ bool Ext2Reader::findFileInFolder(int inodeIndex, const std::string& fileName, i
     return false;
 }
 
-bool Ext2Reader::readFile(const std::string& path, std::string& content){
+bool Ext2Reader::readFile(const std::string& path, std::string& content) {
     int inodeIndex;
-    if(!findFileInFolder(0, path, inodeIndex)){
-        std::cerr << "Error: No se encontro el archivo: " << path << std::endl;
-        return false;
-    }
-
+    if (!findFileInFolder(0, path, inodeIndex)) return false;
+    
     Inode inode = readInode(inodeIndex);
-
-    if(inode.i_type != 1){
-        std::cerr << "Error: El inode encontrado no es un archivo." << std::endl;
-        return false;
-    }
-
+    if (inode.i_type != 1) return false;
+    
     content.clear();
     int bytesRead = 0;
-
-    // ✅ Leer TODOS los bloques directos hasta completar i_size
+    
     for (int i = 0; i < 12 && bytesRead < inode.i_size; i++) {
         if (inode.i_block[i] == -1) break;
-
+        
         BlockFile block;
-        if (!readBlockFile(inode.i_block[i], block)) {
-            break;
-        }
-
+        readBlockFile(inode.i_block[i], block);
+        
         int remaining = inode.i_size - bytesRead;
         int toCopy = (remaining < 64) ? remaining : 64;
-
+        
         content.append(block.b_content, toCopy);
         bytesRead += toCopy;
     }
-
+    
     return true;
 }
 

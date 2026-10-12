@@ -77,6 +77,7 @@ bool MKUSR::crearUsuario(const std::string& username,
         std::cout << "❌ " << lastError << std::endl;
         return false;
     }
+    writer.writeJournal("mkusr", "/users.txt", username);
     
     writer.close();
     

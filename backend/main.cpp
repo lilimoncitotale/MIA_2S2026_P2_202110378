@@ -154,12 +154,15 @@ int main() {
             resultado = ejecutarRMUSR(params);
         } else if (comando == "MKFILE") {
             resultado = ejecutarMKFILE(params);
+        } else if (comando == "CAT") {
+            resultado = ejecutarCAT(params);
+        } else if (comando == "JOURNALING") {
+            resultado = ejecutarJOURNALING(params);
         } else if (comando == "REP") {
             resultado = ejecutarREP(params);
-        }else if (comando == "CAT") {
-            resultado = ejecutarCAT(params);
-        }
-        else {
+        } else if (comando == "LOSS") {
+            resultado = ejecutarLOSS(params);
+        }else {
             resultado = "❌ Comando no reconocido: " + comando;
         }
         

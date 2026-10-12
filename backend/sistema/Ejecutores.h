@@ -20,7 +20,19 @@ std::string ejecutarMKGRP(const ParametrosComando& params);
 std::string ejecutarRMGRP(const ParametrosComando& params);
 std::string ejecutarCHGRP(const ParametrosComando& params);
 std::string ejecutarMKDIR(const ParametrosComando& params);
-std::string ejecutarREP(const ParametrosComando& params); 
 std::string ejecutarCAT(const ParametrosComando& params);
+std::string ejecutarREP(const ParametrosComando& params);
+std::string ejecutarLOSS(const ParametrosComando& params);
+std::string ejecutarCAT(const ParametrosComando& params);
+std::string ejecutarUNMOUNT(const ParametrosComando& params);
+std::string ejecutarJOURNALING(const ParametrosComando& params);
+std::string ejecutarLOSS(const ParametrosComando& params);
+std::string ejecutarREMOVE(const ParametrosComando& params);
+std::string ejecutarRENAME(const ParametrosComando& params);
+std::string ejecutarCOPY(const ParametrosComando& params);
+std::string ejecutarMOVE(const ParametrosComando& params);
+std::string ejecutarFIND(const ParametrosComando& params);
+std::string ejecutarCHOWN(const ParametrosComando& params);
+
 
 #endif

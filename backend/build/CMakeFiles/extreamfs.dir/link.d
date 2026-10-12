@@ -11,8 +11,11 @@ extreamfs: \
   CMakeFiles/extreamfs.dir/src/commands/cat.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.o \
+  CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o \
+  CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/login.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o \
+  CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/mkdisk.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/mkfile.cpp.o \
@@ -24,11 +27,13 @@ extreamfs: \
   CMakeFiles/extreamfs.dir/src/commands/rep.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o \
   CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o \
+  CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o \
   CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o \
   CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o \
   CMakeFiles/extreamfs.dir/src/disk/session.cpp.o \
   CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o \
   CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o \
+  CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libpthread.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -83,9 +88,15 @@ CMakeFiles/extreamfs.dir/src/commands/chgrp.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.o:
 
+CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o:
+
+CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o:
+
 CMakeFiles/extreamfs.dir/src/commands/login.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/commands/logout.cpp.o:
+
+CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/commands/mkdir.cpp.o:
 
@@ -109,6 +120,8 @@ CMakeFiles/extreamfs.dir/src/commands/rmgrp.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.o:
 
+CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o:
+
 CMakeFiles/extreamfs.dir/src/disk/diskManager.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/disk/ebr.cpp.o:
@@ -118,6 +131,8 @@ CMakeFiles/extreamfs.dir/src/disk/session.cpp.o:
 CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o:
 
 CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.o:
+
+CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libpthread.a:
 

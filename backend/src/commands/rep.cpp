@@ -666,7 +666,7 @@ bool REP::reportLs(const std::string& id, const std::string& path,
     if (!reader.open(diskPath, partitionStart)) { lastError = "No se pudo abrir EXT2"; return false; }
     
     int folderInode = 0;
-    Inode folderInodeData = reader.readInode(folderInode);
+    Inode folderInodeData = reader.readInodePublic(folderInode);
     
     if (folderInodeData.i_type != 0) {
         reader.close();
@@ -700,7 +700,7 @@ bool REP::reportLs(const std::string& id, const std::string& path,
             int childInode = block.b_content[j].b_inode;
             if (childInode < 0) continue;
             
-            Inode childData = reader.readInode(childInode);
+            Inode childData = reader.readInodePublic(childInode);
             
             Entry e;
             e.name = name;

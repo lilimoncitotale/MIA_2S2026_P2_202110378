@@ -82,6 +82,16 @@ MountedPartition* MountedManager::findById(const std::string& id){
     return nullptr;
 }
 
+//eliminar por ID
+bool MountedManager::removeById(const std::string& id) {
+    mountedPartitions.erase(
+        std::remove_if(mountedPartitions.begin(), mountedPartitions.end(),
+            [&id](const MountedPartition& mp) { return mp.id == id; }),
+        mountedPartitions.end()
+    );
+    return true;
+}
+
 MountedPartition* MountedManager::findByDiskAndName(const std::string& diskPath,
                                                     const std::string& partitionName){
     for (auto& mounted : mountedPartitions){

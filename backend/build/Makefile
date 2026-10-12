@@ -345,6 +345,54 @@ src/commands/fdisk.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/fdisk.cpp.s
 .PHONY : src/commands/fdisk.cpp.s
 
+src/commands/fs_commands.o: src/commands/fs_commands.cpp.o
+.PHONY : src/commands/fs_commands.o
+
+# target to build an object file
+src/commands/fs_commands.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.o
+.PHONY : src/commands/fs_commands.cpp.o
+
+src/commands/fs_commands.i: src/commands/fs_commands.cpp.i
+.PHONY : src/commands/fs_commands.i
+
+# target to preprocess a source file
+src/commands/fs_commands.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.i
+.PHONY : src/commands/fs_commands.cpp.i
+
+src/commands/fs_commands.s: src/commands/fs_commands.cpp.s
+.PHONY : src/commands/fs_commands.s
+
+# target to generate assembly for a file
+src/commands/fs_commands.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/fs_commands.cpp.s
+.PHONY : src/commands/fs_commands.cpp.s
+
+src/commands/journaling.o: src/commands/journaling.cpp.o
+.PHONY : src/commands/journaling.o
+
+# target to build an object file
+src/commands/journaling.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.o
+.PHONY : src/commands/journaling.cpp.o
+
+src/commands/journaling.i: src/commands/journaling.cpp.i
+.PHONY : src/commands/journaling.i
+
+# target to preprocess a source file
+src/commands/journaling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.i
+.PHONY : src/commands/journaling.cpp.i
+
+src/commands/journaling.s: src/commands/journaling.cpp.s
+.PHONY : src/commands/journaling.s
+
+# target to generate assembly for a file
+src/commands/journaling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/journaling.cpp.s
+.PHONY : src/commands/journaling.cpp.s
+
 src/commands/login.o: src/commands/login.cpp.o
 .PHONY : src/commands/login.o
 
@@ -392,6 +440,30 @@ src/commands/logout.s: src/commands/logout.cpp.s
 src/commands/logout.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/logout.cpp.s
 .PHONY : src/commands/logout.cpp.s
+
+src/commands/loss.o: src/commands/loss.cpp.o
+.PHONY : src/commands/loss.o
+
+# target to build an object file
+src/commands/loss.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/loss.cpp.o
+.PHONY : src/commands/loss.cpp.o
+
+src/commands/loss.i: src/commands/loss.cpp.i
+.PHONY : src/commands/loss.i
+
+# target to preprocess a source file
+src/commands/loss.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/loss.cpp.i
+.PHONY : src/commands/loss.cpp.i
+
+src/commands/loss.s: src/commands/loss.cpp.s
+.PHONY : src/commands/loss.s
+
+# target to generate assembly for a file
+src/commands/loss.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/loss.cpp.s
+.PHONY : src/commands/loss.cpp.s
 
 src/commands/mkdir.o: src/commands/mkdir.cpp.o
 .PHONY : src/commands/mkdir.o
@@ -657,6 +729,30 @@ src/commands/rmusr.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/rmusr.cpp.s
 .PHONY : src/commands/rmusr.cpp.s
 
+src/commands/unmount.o: src/commands/unmount.cpp.o
+.PHONY : src/commands/unmount.o
+
+# target to build an object file
+src/commands/unmount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.o
+.PHONY : src/commands/unmount.cpp.o
+
+src/commands/unmount.i: src/commands/unmount.cpp.i
+.PHONY : src/commands/unmount.i
+
+# target to preprocess a source file
+src/commands/unmount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.i
+.PHONY : src/commands/unmount.cpp.i
+
+src/commands/unmount.s: src/commands/unmount.cpp.s
+.PHONY : src/commands/unmount.s
+
+# target to generate assembly for a file
+src/commands/unmount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/commands/unmount.cpp.s
+.PHONY : src/commands/unmount.cpp.s
+
 src/disk/diskManager.o: src/disk/diskManager.cpp.o
 .PHONY : src/disk/diskManager.o
 
@@ -777,6 +873,30 @@ src/ext2/ext2_writer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/ext2/ext2_writer.cpp.s
 .PHONY : src/ext2/ext2_writer.cpp.s
 
+src/server/api_handler.o: src/server/api_handler.cpp.o
+.PHONY : src/server/api_handler.o
+
+# target to build an object file
+src/server/api_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.o
+.PHONY : src/server/api_handler.cpp.o
+
+src/server/api_handler.i: src/server/api_handler.cpp.i
+.PHONY : src/server/api_handler.i
+
+# target to preprocess a source file
+src/server/api_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.i
+.PHONY : src/server/api_handler.cpp.i
+
+src/server/api_handler.s: src/server/api_handler.cpp.s
+.PHONY : src/server/api_handler.s
+
+# target to generate assembly for a file
+src/server/api_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/extreamfs.dir/build.make CMakeFiles/extreamfs.dir/src/server/api_handler.cpp.s
+.PHONY : src/server/api_handler.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -813,12 +933,21 @@ help:
 	@echo "... src/commands/fdisk.o"
 	@echo "... src/commands/fdisk.i"
 	@echo "... src/commands/fdisk.s"
+	@echo "... src/commands/fs_commands.o"
+	@echo "... src/commands/fs_commands.i"
+	@echo "... src/commands/fs_commands.s"
+	@echo "... src/commands/journaling.o"
+	@echo "... src/commands/journaling.i"
+	@echo "... src/commands/journaling.s"
 	@echo "... src/commands/login.o"
 	@echo "... src/commands/login.i"
 	@echo "... src/commands/login.s"
 	@echo "... src/commands/logout.o"
 	@echo "... src/commands/logout.i"
 	@echo "... src/commands/logout.s"
+	@echo "... src/commands/loss.o"
+	@echo "... src/commands/loss.i"
+	@echo "... src/commands/loss.s"
 	@echo "... src/commands/mkdir.o"
 	@echo "... src/commands/mkdir.i"
 	@echo "... src/commands/mkdir.s"
@@ -852,6 +981,9 @@ help:
 	@echo "... src/commands/rmusr.o"
 	@echo "... src/commands/rmusr.i"
 	@echo "... src/commands/rmusr.s"
+	@echo "... src/commands/unmount.o"
+	@echo "... src/commands/unmount.i"
+	@echo "... src/commands/unmount.s"
 	@echo "... src/disk/diskManager.o"
 	@echo "... src/disk/diskManager.i"
 	@echo "... src/disk/diskManager.s"
@@ -867,6 +999,9 @@ help:
 	@echo "... src/ext2/ext2_writer.o"
 	@echo "... src/ext2/ext2_writer.i"
 	@echo "... src/ext2/ext2_writer.s"
+	@echo "... src/server/api_handler.o"
+	@echo "... src/server/api_handler.i"
+	@echo "... src/server/api_handler.s"
 .PHONY : help
 
 

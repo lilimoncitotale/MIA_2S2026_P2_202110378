@@ -23,6 +23,7 @@ struct ParametrosComando{
     std::string grp;
     std::string cont;
     std::string type_format;
+    std::string fs;
     bool r_flag;
 
     //banderas para saber que parametros estan presentes
@@ -39,8 +40,8 @@ struct ParametrosComando{
     bool cont_presente;
     bool r_flag_presente;
     bool type_format_presente;
-    std::map<int, std::string> files;  // file1 → ruta, file2 → ruta
-    bool files_presente ;
+    bool fs_presente;
+    std::map<std::string, std::string> cat_files;
 
     //constructor
     ParametrosComando();
@@ -72,10 +73,12 @@ private:
     bool analizarRMGRP();
     bool analizarCHGRP();
     bool analizarMKDIR();
-    bool analizarLOGIN();
-    bool analizarREP(); 
-    bool analizarLOGOUT();
     bool analizarCAT();
+    bool analizarREP();
+    bool analizarLOGIN();
+    bool analizarLOGOUT();
+    bool analizarJOURNALING();
+    bool analizarLOSS();
 
     //metodos auxiliares
     bool esperarToken(TokenType tipo, const std::string& mensaje_error);

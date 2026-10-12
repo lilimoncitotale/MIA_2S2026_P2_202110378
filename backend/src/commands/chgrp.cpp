@@ -103,6 +103,7 @@ bool CHGRP::cambiarGrupo(const std::string& username, const std::string& group) 
         std::cout << "❌ " << lastError << std::endl;
         return false;
     }
+    writer.writeJournal("chgrp", "/users.txt", username + "->" + group);
     
     writer.close();
     

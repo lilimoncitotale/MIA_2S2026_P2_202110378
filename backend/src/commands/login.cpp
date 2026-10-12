@@ -2,6 +2,7 @@
 #include "../../include/disk/mounted.h"
 #include "../../include/commands/login.h"
 #include "../../include/ext2/ext2_reader.h"
+#include "../../include/ext2/ext2_writer.h"
 
 #include <iostream>
 #include <sstream>
@@ -170,6 +171,12 @@ bool Login::iniciarSesion(const std::string& id, const std::string&username, con
     std::cout << "   GID: " << foundUser.gid << std::endl;
     std::cout << "   Partición: " << partitionName << " (" << id << ")" << std::endl;
     std::cout << "=========================================" << std::endl;
+
+    Ext2Writer writer;
+    if (writer.openForWrite(diskPath, partitionStart)) {
+        writer.writeJournal("login", "/", username);
+        writer.close();
+    }
     
     return true;
 }
