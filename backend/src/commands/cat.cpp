@@ -55,21 +55,9 @@ bool CAT::leerArchivos(const std::map<std::string, std::string>& params) {
     for (const auto& [num, filePath] : files) {
         std::cout << "   📄 Leyendo: " << filePath << std::endl;
         
-        // Parsear la ruta
-        std::string fileName = filePath;
-        if (!fileName.empty() && fileName[0] == '/') {
-            fileName = fileName.substr(1);
-        }
-        
-        // Si tiene más "/", es una ruta anidada
-        // TODO: Soportar rutas anidadas navegando carpetas
-        size_t lastSlash = fileName.find_last_of('/');
-        if (lastSlash != std::string::npos) {
-            fileName = fileName.substr(lastSlash + 1);
-        }
         
         std::string content;
-        if (reader.readFile(fileName, content)) {
+        if (reader.readFile(filePath, content)) {
             output += content;
             if (!content.empty() && content.back() != '\n') output += '\n';
             // Mostrar contenido
