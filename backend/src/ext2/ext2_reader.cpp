@@ -1,7 +1,8 @@
 #include "../../include/ext2/ext2_reader.h"
 #include <iostream>
 #include <cstring>
-
+#include <sstream>      
+#include <vector>       
 Ext2Reader::Ext2Reader() : isOpen(false) {}
 
 Ext2Reader::~Ext2Reader() {
@@ -134,11 +135,31 @@ bool Ext2Reader::findFileInFolder(int inodeIndex, const std::string& fileName, i
 }
 
 bool Ext2Reader::readFile(const std::string& path, std::string& content) {
-    int inodeIndex;
-    if (!findFileInFolder(0, path, inodeIndex)) return false;
+    // ✅ Navegar por la ruta
+    int inodeIndex = 0;  // Raíz
+    std::stringstream ss(path);
+    std::string part;
+    std::vector<std::string> parts;
+    
+    while (std::getline(ss, part, '/')) {
+        if (!part.empty()) parts.push_back(part);
+    }
+    
+    for (size_t i = 0; i < parts.size(); i++) {
+        int nextInode = -1;
+        if (!findFileInFolder(inodeIndex, parts[i], nextInode)) {
+            std::cerr << "Error: No se encontró: " << parts[i] << std::endl;
+            return false;
+        }
+        inodeIndex = nextInode;
+    }
     
     Inode inode = readInode(inodeIndex);
-    if (inode.i_type != 1) return false;
+    
+    if (inode.i_type != 1) {
+        std::cerr << "Error: No es archivo" << std::endl;
+        return false;
+    }
     
     content.clear();
     int bytesRead = 0;

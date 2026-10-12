@@ -175,4 +175,5 @@ CMakeFiles/extreamfs.dir/src/ext2/ext2_reader.cpp.o: \
  /usr/include/string.h /usr/include/strings.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/ext2/inode.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/src/ext2/../../include/ext2/block.h \
- /usr/include/c++/15/iostream
+ /usr/include/c++/15/iostream /usr/include/c++/15/sstream \
+ /usr/include/c++/15/bits/sstream.tcc

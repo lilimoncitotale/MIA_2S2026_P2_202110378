@@ -186,8 +186,36 @@ json ApiHandler::listarCarpeta(const std::string& id, const std::string& path) {
         return result;
     }
     
-    int folderInode = 0;
+    // ✅ NUEVO: Navegar por la ruta
+    int folderInode = 0;  // Raíz por defecto
+    if (!path.empty() && path != "/") {
+        // Navegar por cada componente
+        std::stringstream ss(path);
+        std::string part;
+        int currentInode = 0;
+        
+        while (std::getline(ss, part, '/')) {
+            if (part.empty()) continue;
+            
+            int nextInode = -1;
+            if (!reader.findFileInFolder(currentInode, part, nextInode)) {
+                result["error"] = "Carpeta no encontrada: " + part;
+                reader.close();
+                return result;
+            }
+            currentInode = nextInode;
+        }
+        folderInode = currentInode;
+    }
+    
     Inode folderInodeData = reader.readInode(folderInode);
+    
+    // Verificar que sea carpeta
+    if (folderInodeData.i_type != 0) {
+        result["error"] = "La ruta no es una carpeta";
+        reader.close();
+        return result;
+    }
     
     json files = json::array();
     
