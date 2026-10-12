@@ -133,8 +133,8 @@ bool Mount::montar(const std::string& path, const std::string& name) {
     // 8. Actualizar la partición en el MBR
     partition.part_status = '1';
     partition.part_correlative = g_mountedManager.getMounted().size() + 1;
-    strncpy(partition.part_id, id.c_str(), 3);
-    partition.part_id[3] = '\0';
+    memset(partition.part_id, 0, 4);
+    memcpy(partition.part_id, id.c_str(), 4);
     
     // 9. Guardar el MBR actualizado
     if (!writeMBR(path, mbr)) {
