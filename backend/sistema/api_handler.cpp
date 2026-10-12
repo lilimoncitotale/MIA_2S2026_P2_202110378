@@ -69,8 +69,11 @@ json ApiHandler::listarDiscos() {
                             parte["status"] = (p.part_status == '1') ? "Montada" : "No montada";
                             
                             if (p.part_status == '1') {
-                                std::string id(p.part_id, 4);
-                                parte["id"] = id.c_str();
+                                std::string id;
+                                for (int k = 0; k < 4; k++) {
+                                    if (p.part_id[k] != '\0') id += p.part_id[k];
+                                }
+                                parte["id"] = id;
                             }
                             
                             partes.push_back(parte);
@@ -135,9 +138,12 @@ json ApiHandler::infoDisco(const std::string& path) {
         parte["size"] = p.part_size;
         parte["status"] = (p.part_status == '1') ? "Montada" : "No montada";
         
-        if (p.part_status == '1') {
-            std::string id(p.part_id, 4);
-            parte["id"] = id.c_str();
+         if (p.part_status == '1') {
+            std::string id;
+            for (int k = 0; k < 4; k++) {
+                if (p.part_id[k] != '\0') id += p.part_id[k];
+            }
+            parte["id"] = id;
         }
         
         partes.push_back(parte);
