@@ -6,6 +6,7 @@
 #include "include/nlohmann/json.hpp"
 #include "parser/Parser.h"
 #include "sistema/Ejecutores.h"
+#include "sistema/api_handler.h"  
 
 using namespace httplib;
 using json = nlohmann::json;
@@ -78,6 +79,92 @@ int main() {
             return Server::HandlerResponse::Handled;
         }
         return Server::HandlerResponse::Unhandled;
+    });
+        // ============================================
+    // ENDPOINTS DE LA API (para el frontend)
+    // ============================================
+    
+
+    // Listar discos
+    svr.Get("/api/discos", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        json respuesta = ApiHandler::listarDiscos();
+        res.set_content(respuesta.dump(), "application/json");
+    });
+
+    // Info de un disco
+    svr.Get("/api/disco", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        std::string path = req.get_param_value("path");
+        json respuesta = ApiHandler::infoDisco(path);
+        res.set_content(respuesta.dump(), "application/json");
+    });
+
+    // Info de una partición
+    svr.Get("/api/particion", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        std::string id = req.get_param_value("id");
+        json respuesta = ApiHandler::infoParticion(id);
+        res.set_content(respuesta.dump(), "application/json");
+    });
+
+    // Listar carpeta
+    svr.Get("/api/fs/ls", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        std::string id = req.get_param_value("id");
+        std::string path = req.get_param_value("path");
+        if (path.empty()) path = "/";
+        json respuesta = ApiHandler::listarCarpeta(id, path);
+        res.set_content(respuesta.dump(), "application/json");
+    });
+
+    // Leer archivo
+    svr.Get("/api/fs/file", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        std::string id = req.get_param_value("id");
+        std::string path = req.get_param_value("path");
+        json respuesta = ApiHandler::leerArchivo(id, path);
+        res.set_content(respuesta.dump(), "application/json");
+    });
+
+    // Login gráfico
+    svr.Post("/api/login", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        try {
+            json body = json::parse(req.body);
+            std::string id = body.value("id", "");
+            std::string user = body.value("user", "");
+            std::string pass = body.value("pass", "");
+            json respuesta = ApiHandler::loginGrafico(id, user, pass);
+            res.set_content(respuesta.dump(), "application/json");
+        } catch (...) {
+            json respuesta;
+            respuesta["success"] = false;
+            respuesta["error"] = "JSON inválido";
+            res.set_content(respuesta.dump(), "application/json");
+        }
+    });
+
+    // Logout gráfico
+    svr.Post("/api/logout", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        json respuesta = ApiHandler::logoutGrafico();
+        res.set_content(respuesta.dump(), "application/json");
+    });
+
+    // Estado de sesión
+    svr.Get("/api/session", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        json respuesta = ApiHandler::estadoSesion();
+        res.set_content(respuesta.dump(), "application/json");
+    });
+
+    // Journaling
+    svr.Get("/api/journaling", [](const Request& req, Response& res) {
+        configurarCORS(res);
+        std::string id = req.get_param_value("id");
+        json respuesta = ApiHandler::listarJournal(id);
+        res.set_content(respuesta.dump(), "application/json");
     });
 
     // ENDPOINT 1: Ping (GET)

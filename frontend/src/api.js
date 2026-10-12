@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'http://77.113.81.18:8080/api';
 
 // Helper genérico
 async function fetchJSON(url, options = {}) {

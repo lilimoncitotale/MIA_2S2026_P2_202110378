@@ -371,4 +371,6 @@ CMakeFiles/extreamfs.dir/main.cpp.o: \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/Parser.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/parser/../lexer/Token.h \
  /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/Ejecutores.h \
- /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../parser/Parser.h
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/../parser/Parser.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/sistema/api_handler.h \
+ /home/lilimon/Documents/Archivos/Proyecto\ 1/backend/./include/nlohmann/json.hpp

@@ -8,7 +8,7 @@ export default function Home() {
 
   const probarConexion = async () => {
     try {
-      const response = await fetch('http://localhost:8080/ping');
+      const response = await fetch('http://77.113.81.18:8080/ping');
       const data = await response.json();
       setConectado(true);
       setRespuesta(`✅ Conectado: ${data.message}`);
@@ -32,7 +32,7 @@ export default function Home() {
       const lineas = comando.split('\n').filter(line => line.trim() !== '');
 
       if (lineas.length === 1) {
-        const response = await fetch('http://localhost:8080/comando', {
+        const response = await fetch('http://77.113.81.18:8080/comando', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ comando: lineas[0].trim() }),
@@ -54,7 +54,7 @@ export default function Home() {
           resultados += `${i + 1}. ${cmd}\n`;
 
           try {
-            const response = await fetch('http://localhost:8080/comando', {
+            const response = await fetch('http://77.113.81.18:8080/comando', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ comando: cmd }),
@@ -96,7 +96,7 @@ export default function Home() {
     setRespuesta('⏳ Analizando...');
 
     try {
-      const response = await fetch('http://localhost:8080/analizar', {
+      const response = await fetch('http://77.113.81.18:8080/analizar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ comando: comando }),
